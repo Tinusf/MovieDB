@@ -23,6 +23,7 @@
     "sqlite3": "^4.0.3"
   },
   "scripts": {
+    "start": "babel-node --presets es2015 ./src/Server.js",
     "start2": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

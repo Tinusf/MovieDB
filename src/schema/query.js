@@ -1,5 +1,5 @@
-import {GraphQLObjectType, GraphQLString, GraphQLList} from 'graphql';
-import {moviesMetadata} from './types';
+import { GraphQLObjectType, GraphQLString, GraphQLInt, GraphQLList} from 'graphql';
+import {moviesMetadataType} from './types';
 import {resolveMovies} from './resolver';
 
 const Query = new GraphQLObjectType({
@@ -10,11 +10,11 @@ const Query = new GraphQLObjectType({
       resolve: () => 'world'
     },
     movies: {
-      type: new GraphQLList(moviesMetadata),
+      type: new GraphQLList(moviesMetadataType),
       args: {
         id: {
           id: 'id',
-          type: GraphQLString
+          type: GraphQLInt
         }
       },
       resolve: resolveMovies

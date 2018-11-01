@@ -1,3 +1,6 @@
+import Schema from './schema';
+
+
 const express = require('express');
 const graphqlHTTP = require('express-graphql');
 const { buildASTSchema } = require('graphql');
@@ -38,7 +41,7 @@ const schema = buildASTSchema(gql`
 const app = express();
 
 app.use('/graphql', graphqlHTTP({
-    schema: schema,
+    schema: Schema,
     graphiql: true
 }));
 

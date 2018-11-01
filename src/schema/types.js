@@ -58,6 +58,18 @@ export const moviesMetadataType = new GraphQLObjectType({
       type: GraphQLString,
       description: 'Link to movie poster',
     },
+    productionCompanies: {
+      type: GraphQLString,
+      description: 'Companies that produced movie',
+    },
+    productionCountries: {
+      type: GraphQLString,
+      description: 'Countries the movie was produced in',
+    },
+    releaseDate: {
+      type: GraphQLString,
+      description: 'Movie release date',
+    },
     revenue: {
       type: GraphQLInt,
       description: 'Movie revenue',

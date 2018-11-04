@@ -1,3 +1,7 @@
-// In order to run the Server using newer ecmascript we need to do this. Then we can import using the new EC6 method, example: import Schema from './schema'; 
-require('babel-register')({stage: 0});
-require('./server');
+// Transpile all code following this line with babel and use 'env' (aka ES6) preset.
+require('babel-register')({
+    presets: ['env']
+})
+
+// Import the rest of our application.
+module.exports = require('./Server.js')

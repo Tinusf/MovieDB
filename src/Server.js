@@ -13,6 +13,6 @@ app.use('/graphql', graphqlHTTP({
 }));
 
 
-console.log(printSchema(Schema))
+// console.log(printSchema(Schema))
 
 app.listen(4000);

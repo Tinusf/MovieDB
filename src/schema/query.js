@@ -1,6 +1,6 @@
-import { GraphQLObjectType, GraphQLString, GraphQLInt, GraphQLList} from 'graphql';
-import {moviesMetadataType} from './types';
-import {resolveMovies} from './resolver';
+import { GraphQLObjectType, GraphQLString, GraphQLInt, GraphQLList, GraphQLBoolean} from 'graphql';
+import {movies_metadataType} from './types';
+import { resolveMovie, resolveMovies } from './resolver';
 
 const Query = new GraphQLObjectType({
   name: 'RootQueryType',
@@ -9,13 +9,36 @@ const Query = new GraphQLObjectType({
       type: GraphQLString,
       resolve: () => 'world'
     },
-    movies: {
-      type: new GraphQLList(moviesMetadataType),
+    movie: {
+      type: movies_metadataType,
       args: {
         id: {
           id: 'id',
           type: GraphQLInt
         }
+      },
+      resolve: resolveMovie
+    }, 
+    movies: {
+      type: new GraphQLList(movies_metadataType),
+      args: {
+        searchText: {
+          searchText: 'searchText',
+          type: GraphQLString
+        }, 
+        pagenr: {
+          pagenr: 'pagenr',
+          type: GraphQLInt
+        },
+        ordering: {
+          ordering: 'ordering',
+          type: GraphQLString
+        },
+        asc: {
+          asc: 'asc',
+          type: GraphQLBoolean
+        }
+
       },
       resolve: resolveMovies
     }

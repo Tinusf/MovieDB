@@ -7,7 +7,7 @@ import {
 
 const fetchQuery = (operation, variables, cacheConfig, uploadables) => {
   return (
-    fetch('https://localhost:4000/graphql', {
+    fetch('http://localhost:4000/graphql', {
         method: 'POST',
         headers: {
           'content-type': 'application/json'

@@ -6,15 +6,15 @@ import {
   GraphQLFloat
 } from 'graphql';
 
-export const moviesMetadataType = new GraphQLObjectType({
-  name: 'MoviesMetadata',
+export const movies_metadataType = new GraphQLObjectType({
+  name: 'movies_metadata',
   description: 'Movie metadata',
   fields: () => ({
     adult: {
       type: GraphQLString,
       description: "Adult movie or not"       
     },
-    belongsToCollection: {
+    belongs_to_collection: {
       type: GraphQLString,
       description: 'Movie collection',
     },
@@ -34,15 +34,15 @@ export const moviesMetadataType = new GraphQLObjectType({
       type: new GraphQLNonNull(GraphQLInt),
       description: 'Movie id',
     },
-    imdbId: {
+    imdb_id: {
       type: GraphQLString,
       description: 'imdb id',
     },
-      originalLanguage: {
+    original_language: {
       type: GraphQLString,
       description: 'Original movie language',
     },
-    originalTitle: {
+    original_title: {
       type: GraphQLString,
       description: 'Original movie title',
     },
@@ -54,19 +54,19 @@ export const moviesMetadataType = new GraphQLObjectType({
       type: GraphQLFloat,
       description: 'Movie popularity',
     },
-    posterPath: {
+    poster_path: {
       type: GraphQLString,
       description: 'Link to movie poster',
     },
-    productionCompanies: {
+    production_companies: {
       type: GraphQLString,
       description: 'Companies that produced movie',
     },
-    productionCountries: {
+    production_countries: {
       type: GraphQLString,
       description: 'Countries the movie was produced in',
     },
-    releaseDate: {
+    release_date: {
       type: GraphQLString,
       description: 'Movie release date',
     },
@@ -74,11 +74,11 @@ export const moviesMetadataType = new GraphQLObjectType({
       type: GraphQLInt,
       description: 'Movie revenue',
     },
-    runtine: {
-      type: GraphQLString,
+    runtime: {
+      type: GraphQLFloat,
       description: 'Movie runtime',
     },
-    spokenLanguage: {
+    spoken_languages: {
       type: GraphQLString,
       description: 'Spoken languages in movie',
     },
@@ -98,11 +98,11 @@ export const moviesMetadataType = new GraphQLObjectType({
       type: GraphQLString,
       description: 'Movie video',
     },
-    voteAverage: {
+    vote_average: {
       type: GraphQLFloat,
       description: 'Average movie rating',
     },
-    voteCount: {
+    vote_count: {
       type: GraphQLInt,
       description: 'Movie rating count',
     }

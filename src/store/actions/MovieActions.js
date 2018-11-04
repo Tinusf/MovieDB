@@ -1,5 +1,5 @@
 import { graphql} from 'relay-runtime';
-import { runGraphQLQuery } from '../utils/Utils'
+import { runGraphQLQuery } from '../../utils/Utils'
 
 
 /*

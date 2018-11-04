@@ -28,7 +28,7 @@
   },
   "scripts": {
     "start": "babel-node --presets es2015 ./src/StartServer.js",
-    "start2": "react-scripts start",
+    "start-client": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",

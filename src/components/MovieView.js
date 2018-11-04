@@ -7,6 +7,11 @@ Display detailed information about a movie in a single page.
 
 */
 class MovieView extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+
   render() {
     //this.testx()
     return (
@@ -17,11 +22,11 @@ class MovieView extends React.Component {
   componentDidMount() {
     var query = `
     query MovieView_Query($movieId: Int!) {
-      movies(id: $movieId) {
+      movie(id: $movieId) {
         title,
         budget,
         homepage,
-        imdbId
+        imdb_id
       }
     }`;
     const movieId = 5

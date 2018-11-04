@@ -1,10 +1,10 @@
 """Movie metadata"""
-type MoviesMetadata {
+type movies_metadata {
   """Adult movie or not"""
   adult: String
 
   """Movie collection"""
-  belongsToCollection: String
+  belongs_to_collection: String
 
   """Movie budget"""
   budget: Int
@@ -19,13 +19,13 @@ type MoviesMetadata {
   id: Int!
 
   """imdb id"""
-  imdbId: String
+  imdb_id: String
 
   """Original movie language"""
-  originalLanguage: String
+  original_language: String
 
   """Original movie title"""
-  originalTitle: String
+  original_title: String
 
   """Movie overview"""
   overview: String
@@ -34,16 +34,25 @@ type MoviesMetadata {
   popularity: Float
 
   """Link to movie poster"""
-  posterPath: String
+  poster_path: String
+
+  """Companies that produced movie"""
+  production_companies: String
+
+  """Countries the movie was produced in"""
+  production_countries: String
+
+  """Movie release date"""
+  release_date: String
 
   """Movie revenue"""
   revenue: Int
 
   """Movie runtime"""
-  runtine: String
+  runtime: String
 
   """Spoken languages in movie"""
-  spokenLanguage: String
+  spoken_languages: String
 
   """Is the movie released"""
   status: String
@@ -58,15 +67,15 @@ type MoviesMetadata {
   video: String
 
   """Average movie rating"""
-  voteAverage: Float
+  vote_average: Float
 
   """Movie rating count"""
-  voteCount: Int
+  vote_count: Int
 }
 
 type RootQueryType {
   hello: String
-  movies(id: ID!): [MoviesMetadata]
+  movies(id: ID!): [movies_metadata]
 }
 
 schema {

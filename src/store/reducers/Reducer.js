@@ -1,5 +1,5 @@
 import { combineReducers } from "redux";
-import { SEARCH_MOVIES, SET_SEARCH_SETTINGS } from "../actions/Movie-actions";
+import { SEARCH_MOVIES, SET_SEARCH_SETTINGS } from "../actions/MovieActions";
 
 let movies = (state =  {category: "all", sortBy: "rating", searchQuery: "", movies: []}, action) => {
   // oppdater hvilke filmer som skal vises

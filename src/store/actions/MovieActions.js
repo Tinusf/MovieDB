@@ -1,5 +1,5 @@
-import {fetchQuery, graphql} from 'relay-runtime';
-import environment from '../NetworkLayer';
+import { graphql} from 'relay-runtime';
+import { runGraphQLQuery } from '../utils/Utils'
 
 
 /*
@@ -20,21 +20,21 @@ export function searchMovies(searchQuery) {
 
 export function setSearchSettings(orderBy, category) {
   // Eksempel implemntasjon 
-  const query = graphql`
-    query ExampleQuery($pageID: ID!) {
-      page(id: $pageID) {
-        name
-      }
-    }`;
-  const variables = {
-    pageID: '110798995619330',
-  };
+  var query = `query MovieView_Query($movieId: Int!) {
+    movies(id: $movieId) {
+      title,
+      budget,
+      homepage,
+      imdbId
+    }
+  }`;
+  const movieId = 5
   return {
      type: SET_SEARCH_SETTINGS, 
      orderBy, 
      category,
      async payload() {
-      const { data } = await fetchQuery(environment, query, variables)
+      const  data  = await runGraphQLQuery(query, {movieId});
       return { movies: data.movies };
     }  
   };

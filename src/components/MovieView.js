@@ -1,6 +1,5 @@
 import React from 'react';
-import { QueryRenderer, graphql } from 'react-relay';
-import environment from '../NetworkLayer';
+import { runGraphQLQuery } from '../utils/Utils'
 
 /*
 
@@ -9,30 +8,24 @@ Display detailed information about a movie in a single page.
 */
 class MovieView extends React.Component {
   render() {
+    //this.testx()
     return (
-      <QueryRenderer
-        environment={environment}
-        query={graphql`
-          query ExampleQuery($pageID: ID!) {
-            page(id: $pageID) {
-              name
-            }
-          }
-        `}
-        variables={{
-          pageID: '110798995619330',
-        }}
-        render={({error, props}) => {
-          if (error) {
-            return <div>{error.message}</div>;
-          } else if (props) {
-            //Render film detailjer
-            return <div>{props.page.name} is great!</div>;
-          }
-          return <div>Loading</div>;
-        }}
-      />
+      <div></div>
     );
+  }
+
+  componentDidMount() {
+    var query = `
+    query MovieView_Query($movieId: Int!) {
+      movies(id: $movieId) {
+        title,
+        budget,
+        homepage,
+        imdbId
+      }
+    }`;
+    const movieId = 5
+    runGraphQLQuery(query, {movieId}).then(data => this.setState({movie: data}));
   }
 }
 

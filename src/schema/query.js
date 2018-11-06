@@ -1,6 +1,6 @@
-import { GraphQLObjectType, GraphQLString, GraphQLInt, GraphQLList, GraphQLBoolean} from 'graphql';
-import {movies_metadataType} from './types';
-import { resolveMovie, resolveMovies } from './resolver';
+import { GraphQLObjectType, GraphQLString, GraphQLInt, GraphQLList, GraphQLBoolean, GraphQLFloat} from 'graphql';
+import {movies_metadataType, RatingsType} from './types';
+import { resolveMovie, resolveMovies, resolveRating } from './resolver';
 
 const Query = new GraphQLObjectType({
   name: 'RootQueryType',
@@ -38,9 +38,22 @@ const Query = new GraphQLObjectType({
           asc: 'asc',
           type: GraphQLBoolean
         }
-
       },
       resolve: resolveMovies
+    },
+    rating: {
+      type: RatingsType,
+      args: {
+        userId: {
+          userId: 'userId',
+          type: GraphQLInt
+        },
+        movieId: {
+          movieId: 'movieId',
+          type: GraphQLInt
+        }
+      },
+      resolve: resolveRating
     }
   }
 });

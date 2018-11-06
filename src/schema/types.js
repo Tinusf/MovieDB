@@ -168,7 +168,7 @@ export const RatingsType = new GraphQLObjectType({
   description: 'Movie ratings',
   fields: () => ({
     userId: {
-      type: new GraphQLNonNull(GraphQLInt),
+      type: new GraphQLNonNull(GraphQLString),
       description: 'User id that rated movie'       
     },
     movieId: {

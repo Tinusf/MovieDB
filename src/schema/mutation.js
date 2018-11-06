@@ -10,7 +10,7 @@ const Mutation = new GraphQLObjectType({
         args: {
           userId: {
             userId: 'userId',
-            type: GraphQLInt
+            type: GraphQLString
           },
           movieId: {
             movieId: 'movieId',

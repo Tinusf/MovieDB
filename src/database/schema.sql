@@ -43,7 +43,7 @@ CREATE TABLE credits(
   foreign key (id) references movies_metadata(id) on update cascade on delete cascade
 );
 CREATE TABLE ratings(
-  userId integer,
+  userId varchar(60),
   movieId integer,
   rating float,
   timestamp integer,

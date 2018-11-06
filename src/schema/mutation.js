@@ -19,10 +19,6 @@ const Mutation = new GraphQLObjectType({
           rating: {
             rating: 'rating',
             type: GraphQLFloat
-          },
-          userId: {
-            timestamp: 'timestamp',
-            type: GraphQLInt
           }
         },
         resolve: resolveAddRating

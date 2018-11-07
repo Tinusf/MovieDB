@@ -1,5 +1,8 @@
 import React from 'react';
-import { runGraphQLQuery } from '../utils/Utils'
+import { runGraphQLQuery } from '../utils/Utils';
+import C3Chart from 'react-c3js';
+import 'c3/c3.css';
+
 const uuidv1 = require('uuid/v1');
 /*
 
@@ -13,9 +16,10 @@ class MovieView extends React.Component {
   }
 
   render() {
-    //this.testx()
     return (
-      <div></div>
+      <div>
+        {this.state.graphData && <C3Chart data={this.state.graphData} />}
+      </div>
     );
   }
 
@@ -32,7 +36,7 @@ class MovieView extends React.Component {
     }
     const id = uuidv1();
     localStorage.setItem('userId', id);
-    this.setState({userId: id});
+    this.setState({ userId: id });
     return id;
   }
 
@@ -47,7 +51,40 @@ class MovieView extends React.Component {
       }
     }`;
     const movieId = 5
-    runGraphQLQuery(query, {movieId}).then(data => this.setState({movie: data}));
+    runGraphQLQuery(query, { movieId }).then(data => this.setState({ movie: data }));
+
+
+    var query2 = `
+    query ratingsForAMovieQuery($movieId: Int!) {
+      ratingsForAMovie(movieId: $movieId) {
+        rating
+        count
+      }
+    }`;
+
+    runGraphQLQuery(query2, { movieId })
+      .then(data => data.data.ratingsForAMovie)
+      .then(data => {
+        // Lager to tomme arrays
+        let ratings = ["Rating"]
+        let xValues = ["x"]
+        // Går gjennom hvert element i arrayet jeg fikk fra serveren.
+        data.forEach(rating => {
+          // Legger til verdiene i arrayene mine over.
+          ratings.push(rating.count);
+          xValues.push(rating.rating);
+        });
+        // Så setter jeg state og dette blir på riktig c3js format så grafen ser fin ut.
+        this.setState({
+          graphData: {
+            x: "x",
+            columns: [
+              xValues,
+              ratings
+            ]
+          }
+        });
+      });
   }
 }
 

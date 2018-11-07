@@ -12,7 +12,7 @@ export const movies_metadataType = new GraphQLObjectType({
   fields: () => ({
     adult: {
       type: GraphQLString,
-      description: "Adult movie or not"       
+      description: "Adult movie or not"
     },
     belongs_to_collection: {
       type: GraphQLString,
@@ -29,7 +29,7 @@ export const movies_metadataType = new GraphQLObjectType({
     homepage: {
       type: GraphQLString,
       description: 'Movie homepage',
-    },    
+    },
     id: {
       type: new GraphQLNonNull(GraphQLInt),
       description: 'Movie id',
@@ -125,7 +125,7 @@ export const linksType = new GraphQLObjectType({
     tmdbId: {
       type: GraphQLString,
       description: 'tmdb id',
-    } 
+    }
   })
 });
 
@@ -135,7 +135,7 @@ export const KeywordsType = new GraphQLObjectType({
   fietlds: () => ({
     id: {
       type: new GraphQLNonNull(GraphQLInt),
-      description: 'Movie id'       
+      description: 'Movie id'
     },
     keywords: {
       type: GraphQLString,
@@ -150,7 +150,7 @@ export const CreditsType = new GraphQLObjectType({
   fields: () => ({
     cast: {
       type: GraphQLString,
-      description: 'Movie cast'       
+      description: 'Movie cast'
     },
     crew: {
       type: GraphQLString,
@@ -164,24 +164,28 @@ export const CreditsType = new GraphQLObjectType({
 });
 
 export const RatingsType = new GraphQLObjectType({
-  name: 'Ratings',
+  name: 'ratings',
   description: 'Movie ratings',
   fields: () => ({
     userId: {
       type: new GraphQLNonNull(GraphQLString),
-      description: 'User id that rated movie'       
+      description: 'User id that rated movie'
     },
     movieId: {
       type: new GraphQLNonNull(GraphQLInt),
       description: 'Movie id',
     },
-      rating: {
+    rating: {
       type: GraphQLFloat,
       description: 'Movie rating',
     },
-      timestamp: {
+    timestamp: {
       type: GraphQLInt,
       description: 'Movie rating timestamp',
+    },
+    count: {
+      type: GraphQLInt,
+      description: 'How many of a specific rating for a specific movie. Only used for fetching data this attribute is not stored in the SQL database.',
     }
   })
 });

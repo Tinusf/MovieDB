@@ -18,6 +18,14 @@ export async function resolveRating(rootValue, { userId, movieId }) {
   return await db.where('userId ', userId).where('movieId', movieId).select('*').from('ratings').first();
 }
 
+export async function resolveCredits(rootValue, { id }) {
+  return await db.where('id', id).select('*').from('credits').first();
+}
+
+export async function resolveKeywords(rootValue, { id }) {
+  return await db.where('id', id).select('*').from('keywords').first();
+}
+
 // Denne henter hvilken rating og hvor mange som ratet det et visst antall stjerner for en film.
 // SQL queryet ser ish sånn ut:
 // select rating, count(*) as count from ratings where movieid={movieId} group by rating;

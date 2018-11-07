@@ -132,7 +132,7 @@ export const linksType = new GraphQLObjectType({
 export const KeywordsType = new GraphQLObjectType({
   name: 'Keywords',
   description: 'Movie keywords',
-  fietlds: () => ({
+  fields: () => ({
     id: {
       type: new GraphQLNonNull(GraphQLInt),
       description: 'Movie id'

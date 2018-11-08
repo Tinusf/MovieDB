@@ -33,6 +33,12 @@ export async function resolveRatingsForAMovie(rootValue, { movieId }) {
   return await db.where("movieid", movieId).select("rating").select("movieId").count("* as count").from("ratings").groupBy("rating");
 }
 
+// imdb link må ha prefix https://www.imdb.com/title/tt
+// tmdb link må ha prefix https://www.themoviedb.org/movie/
+export async function resolveLinks(rootValue, { movieId }) {
+  return await db.where('movieId', movieId).select('*').from('links').first();
+}
+
 //GraphQL Mutation Resolvers//
 
 export async function resolveAddRating(rootValue, { userId, movieId, rating }) {

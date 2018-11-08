@@ -7,8 +7,14 @@ import InputBase from "@material-ui/core/InputBase";
 import { fade } from "@material-ui/core/styles/colorManipulator";
 import { withStyles } from "@material-ui/core/styles";
 import SearchIcon from "@material-ui/icons/Search";
+import SortIcon from "@material-ui/icons/UnfoldMore";
 import { createMuiTheme } from "@material-ui/core/styles";
 import purple from "@material-ui/core/colors/purple";
+import styled from "styled-components";
+import Button from '@material-ui/core/Button';
+import Menu from '@material-ui/core/Menu';
+import MenuItem from '@material-ui/core/MenuItem';
+
 /*
 
 Should be a part of the grid display of movies
@@ -93,14 +99,50 @@ const styles = theme => ({
     [theme.breakpoints.up("md")]: {
       display: "none"
     }
+  },
+  sortMenu: {
+    position: "absolute",
+    right: 50
+  },
+  sortButton: {
+    color: "white",
+  },
+  sortIcon: {
+    position: "absolute",
+    right: 20,
+    padding: theme.spacing.unit,
+
   }
 });
 
+/* const sortIconIcon = styled.div`
+      cursor: pointer;
+      position: absolute;
+      right: 30;
+    `; */
+
 class MovieGrid extends React.Component {
 
+  state = {
+    anchorEl: null,
+  };
+
+  handleClick = event => {
+    this.setState({ anchorEl: event.currentTarget });
+  };
+
+  handleClose = () => {
+    this.setState({ anchorEl: null });
+    //TODO: Håndter sortering basert på det valgte menuItemet
+  };
+
+  handleChangeSorting = () => {
+    //TODO: Håndter endring av rangering på sorteringen. asc eller desc.
+  };
 
   render() {
     const { classes } = this.props;
+    const { anchorEl } = this.state;
 
     return (
       <AppBar position="static">
@@ -120,7 +162,31 @@ class MovieGrid extends React.Component {
               }}
             />
           </div>
-
+          <div className={classes.sortMenu}>
+            <Button
+              className={classes.sortButton}
+              aria-owns={anchorEl ? 'sort-menu' : undefined}
+              aria-haspopup="true"
+              onClick={this.handleClick}
+            >
+              Sort By
+            </Button>
+            <Menu
+              id="sort-menu"
+              anchorEl={anchorEl}
+              open={Boolean(anchorEl)}
+              onClose={this.handleClose}
+            >
+              <MenuItem onClick={this.handleClose}>Alphabetical</MenuItem>
+              <MenuItem onClick={this.handleClose}>Popularity</MenuItem>
+              <MenuItem onClick={this.handleClose}>Release Date</MenuItem>
+              <MenuItem onClick={this.handleClose}>Budget</MenuItem>
+            </Menu>
+          </div>
+          <div className={classes.sortIcon}
+            style={{ cursor: "pointer" }}>
+            <SortIcon onClick={this.handleChangeSorting} />
+          </div>
         </Toolbar>
       </AppBar>
     );

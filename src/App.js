@@ -1,10 +1,11 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
-import reducer from './store/reducers/Reducer'
-import { Provider } from 'react-redux'
-import { createStore } from 'redux'
-import MovieView from './components/MovieView';
+import React, { Component } from "react";
+import "typeface-roboto";
+import "./App.css";
+import reducer from "./store/reducers/Reducer";
+import { Provider } from "react-redux";
+import { createStore } from "redux";
+import MovieSearch from "./components/MovieSearch";
+import MovieGrid from "./components/MovieGrid";
 
 const store = createStore(reducer);
 
@@ -13,21 +14,8 @@ class App extends Component {
     return (
       <Provider store={store}>
         <div className="App">
-          <MovieView />
-          <header className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
-            <p>
-              Edit <code>src/App.js</code> and save to reload.
-            </p>
-            <a
-              className="App-link"
-              href="https://reactjs.org"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn React
-            </a>
-          </header>
+          <MovieSearch />
+          <MovieGrid />
         </div>
       </Provider>
     );

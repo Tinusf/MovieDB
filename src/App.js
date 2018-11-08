@@ -4,12 +4,10 @@ import "./App.css";
 import reducer from "./store/reducers/Reducer";
 import { Provider } from "react-redux";
 import { createStore } from "redux";
-import MovieView from "./components/MovieView";
 import MovieSearch from "./components/MovieSearch";
+import MovieGrid from "./components/MovieGrid";
 
 const store = createStore(reducer);
-
-
 
 class App extends Component {
   render() {
@@ -17,7 +15,7 @@ class App extends Component {
       <Provider store={store}>
         <div className="App">
           <MovieSearch />
-          <MovieView />
+          <MovieGrid />
         </div>
       </Provider>
     );

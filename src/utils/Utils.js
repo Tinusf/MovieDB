@@ -11,5 +11,5 @@ export async function runGraphQLQuery(query, variables) {
     })
   });
   const json = await response.json();
-  return json;
+  return json ? json.data : json;
 }

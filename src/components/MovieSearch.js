@@ -15,7 +15,6 @@ Should be a part of the grid display of movies
 
 */
 
-
 const theme = createMuiTheme({
   palette: {
     primary: purple,
@@ -24,7 +23,6 @@ const theme = createMuiTheme({
     }
   }
 });
-
 
 const styles = theme => ({
   root: {
@@ -97,8 +95,6 @@ const styles = theme => ({
 });
 
 class MovieGrid extends React.Component {
-
-
   render() {
     const { classes } = this.props;
 
@@ -120,7 +116,6 @@ class MovieGrid extends React.Component {
               }}
             />
           </div>
-
         </Toolbar>
       </AppBar>
     );

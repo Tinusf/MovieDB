@@ -13,6 +13,7 @@ const Grid = styled.div`
   justify-content: center;
   flex-wrap: wrap;
   margin: auto;
+  padding-top: 70px;
 `;
 
 class MovieGrid extends React.Component {

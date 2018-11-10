@@ -11,9 +11,11 @@ import SortIcon from "@material-ui/icons/UnfoldMore";
 import { createMuiTheme } from "@material-ui/core/styles";
 import purple from "@material-ui/core/colors/purple";
 import styled from "styled-components";
-import Button from "@material-ui/core/Button";
-import Menu from "@material-ui/core/Menu";
-import MenuItem from "@material-ui/core/MenuItem";
+import Button from '@material-ui/core/Button';
+import Menu from '@material-ui/core/Menu';
+import MenuItem from '@material-ui/core/MenuItem';
+import { connect } from "react-redux";
+import { setSearchSettings } from "../store/actions/MovieActions";
 
 /*
 
@@ -115,7 +117,11 @@ const styles = theme => ({
 class MovieGrid extends React.Component {
   state = {
     anchorEl: null,
-    asc: true
+    searchText: "",
+    pagenr: 0,
+    asc: false,
+    ordering: "vote_count",
+
   };
 
   handleClick = event => {
@@ -124,13 +130,31 @@ class MovieGrid extends React.Component {
 
   handleClose = sortBy => {
     this.setState({ anchorEl: null });
-    console.log(sortBy);
+    this.setState({ ordering: sortBy });
+    console.log(sortBy)
   };
 
-  handleChangeSorting = ascBool => {
+  handleChangeSorting = (ascBool) => {
     this.setState({ asc: ascBool });
-    console.log(ascBool);
   };
+
+  componentDidUpdate() {
+    console.log(this.state.ordering);
+    this.props.dispatch(setSearchSettings(this.state.searchText, this.state.asc, this.state.pagenr, this.state.ordering));
+  }
+
+  sendInput = (
+    searchText = this.state.searchText,
+    asc = this.state.asc,
+    pagenr = this.state.pagenr,
+    ordering = this.state.ordering,
+  ) => {
+
+  }
+
+  componentDidMount() {
+    this.props.dispatch(setSearchSettings("", false, 0, "vote_count"));
+  }
 
   render() {
     const { classes } = this.props;
@@ -151,6 +175,10 @@ class MovieGrid extends React.Component {
               classes={{
                 root: classes.inputRoot,
                 input: classes.inputInput
+              }}
+              onChange={event => {
+                this.setState({ searchText: event.target.value })
+                // this.sendInput(searchText => event.target.value);
               }}
             />
           </div>
@@ -174,4 +202,4 @@ class MovieGrid extends React.Component {
   }
 }
 
-export default withStyles(styles)(MovieGrid);
+export default connect()(withStyles(styles)(MovieGrid));

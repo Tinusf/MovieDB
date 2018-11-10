@@ -8,6 +8,13 @@ Add a review about a move
 
 */
 class MovieGridItem extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      url: this.props.url
+    };
+  }
+
   render() {
     const Container = styled.div`
       cursor: pointer;
@@ -15,16 +22,18 @@ class MovieGridItem extends React.Component {
     `;
 
     const MoviePoster = styled.img`
-      max-height: 300px;
+      height: 300px;
       width: 200px;
       margin-bottom: 0px;
       border-radius: 4px;
+      background-image: url("./noposter.jpg");
     `;
-
     return (
-      <Container>
-        <MoviePoster src={this.props.url} />
-        <Typography style={{ color: "white", margin: 0 }} variant="subtitle1" gutterBottom>
+      <Container onClick={this.props.onClick}>
+        <MoviePoster
+          style={this.props.ghost && { visibility: "hidden", height: 0 }}
+          src={this.props.url} />
+        <Typography style={{ color: "white", margin: 0, maxWidth: 200, height: 50 }} variant="subtitle1" gutterBottom>
           {this.props.name}
         </Typography>
       </Container>

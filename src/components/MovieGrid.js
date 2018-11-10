@@ -1,6 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import MovieGridItem from "./MovieGridItem";
+import { runGraphQLQuery } from "../utils/Utils";
+import MovieView from "./MovieView";
+import { connect } from "react-redux";
 
 /*
 
@@ -17,67 +20,38 @@ const Grid = styled.div`
 `;
 
 class MovieGrid extends React.Component {
-  render() {
-    const movies = [
-      {
-        name: "The walking dead",
-        url: "https://image.tmdb.org/t/p/w1280/yn7psGTZsHumHOkLUmYpyrIcA2G.jpg"
-      },
-      {
-        name: "Test",
-        url: "https://image.tmdb.org/t/p/w1280/yn7psGTZsHumHOkLUmYpyrIcA2G.jpg"
-      },
-      {
-        name: "Test",
-        url: "https://image.tmdb.org/t/p/w1280/yn7psGTZsHumHOkLUmYpyrIcA2G.jpg"
-      },
-      {
-        name: "Test",
-        url: "https://image.tmdb.org/t/p/w1280/yn7psGTZsHumHOkLUmYpyrIcA2G.jpg"
-      },
-      {
-        name: "Test",
-        url: "https://image.tmdb.org/t/p/w1280/yn7psGTZsHumHOkLUmYpyrIcA2G.jpg"
-      },
-      {
-        name: "Test",
-        url: "https://image.tmdb.org/t/p/w1280/yn7psGTZsHumHOkLUmYpyrIcA2G.jpg"
-      },
-      {
-        name: "Test",
-        url: "https://image.tmdb.org/t/p/w1280/yn7psGTZsHumHOkLUmYpyrIcA2G.jpg"
-      },
-      {
-        name: "Test",
-        url: "https://image.tmdb.org/t/p/w1280/yn7psGTZsHumHOkLUmYpyrIcA2G.jpg"
-      },
-      {
-        name: "Test",
-        url: "https://image.tmdb.org/t/p/w1280/yn7psGTZsHumHOkLUmYpyrIcA2G.jpg"
-      },
-      {
-        name: "Test",
-        url: "https://image.tmdb.org/t/p/w1280/yn7psGTZsHumHOkLUmYpyrIcA2G.jpg"
-      },
-      {
-        name: "Test",
-        url: "https://image.tmdb.org/t/p/w1280/yn7psGTZsHumHOkLUmYpyrIcA2G.jpg"
-      },
-      {
-        name: "Test",
-        url: "https://image.tmdb.org/t/p/w1280/yn7psGTZsHumHOkLUmYpyrIcA2G.jpg"
-      }
-    ];
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
 
-    const movieItems = movies.map(movie => <MovieGridItem name={movie.name} url={movie.url} />);
-    movieItems.push(Array.from(new Array(10), item => <MovieGridItem />));
+  render() {
+    let movieItems;
+    if (this.props.moviesData) {
+      movieItems = this.props.moviesData.map(movie =>
+        <MovieGridItem
+          name={movie.title}
+          url={"https://image.tmdb.org/t/p/w1280/" + movie.poster_path}
+          movieId={movie.id}
+          onClick={e => this.setState({ chosenMovieId: movie.id })}
+        />
+      );
+      // For å få alle fint til venstre så må vi legge til noen ghost items.
+      movieItems.push(Array.from(new Array(10), item => <MovieGridItem ghost={true} url={"./noposter.png"} />));
+    }
+    console.log(this.state.chosenMovieId);
 
     return (
       <div>
-        <Grid>{movieItems}</Grid>
+        {this.state.chosenMovieId &&
+          <MovieView movieId={this.state.chosenMovieId}></MovieView>
+        }
+        {!this.state.chosenMovieId &&
+          <Grid>{movieItems}</Grid>
+        }
       </div>
     );
   }
 }
 
-export default MovieGrid;
+export default connect(state => ({ moviesData: state.movies.movies }))(MovieGrid);

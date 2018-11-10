@@ -3,11 +3,16 @@ import "typeface-roboto";
 import "./App.css";
 import reducer from "./store/reducers/Reducer";
 import { Provider } from "react-redux";
-import { createStore } from "redux";
+import { createStore, applyMiddleware } from "redux";
 import MovieSearch from "./components/MovieSearch";
 import MovieGrid from "./components/MovieGrid";
+import promiseMiddleware from 'redux-promise-middleware';
 
-const store = createStore(reducer);
+const composeStoreWithMiddleware = applyMiddleware(
+  promiseMiddleware(),
+)(createStore);
+
+const store = composeStoreWithMiddleware(reducer);
 
 class App extends Component {
   render() {

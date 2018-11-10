@@ -115,34 +115,31 @@ const styles = theme => ({
   }
 });
 
-/* const sortIconIcon = styled.div`
-      cursor: pointer;
-      position: absolute;
-      right: 30;
-    `; */
-
 class MovieGrid extends React.Component {
 
   state = {
     anchorEl: null,
+    asc: true,
   };
 
   handleClick = event => {
     this.setState({ anchorEl: event.currentTarget });
   };
 
-  handleClose = () => {
+  handleClose = (sortBy) => {
     this.setState({ anchorEl: null });
-    //TODO: Håndter sortering basert på det valgte menuItemet
+    console.log(sortBy)
   };
 
-  handleChangeSorting = () => {
-    //TODO: Håndter endring av rangering på sorteringen. asc eller desc.
+  handleChangeSorting = (ascBool) => {
+    this.setState({ asc: ascBool })
+    console.log(ascBool)
   };
 
   render() {
     const { classes } = this.props;
     const { anchorEl } = this.state;
+
 
     return (
       <AppBar position="static">
@@ -177,15 +174,15 @@ class MovieGrid extends React.Component {
               open={Boolean(anchorEl)}
               onClose={this.handleClose}
             >
-              <MenuItem onClick={this.handleClose}>Alphabetical</MenuItem>
-              <MenuItem onClick={this.handleClose}>Popularity</MenuItem>
-              <MenuItem onClick={this.handleClose}>Release Date</MenuItem>
-              <MenuItem onClick={this.handleClose}>Budget</MenuItem>
+              <MenuItem onClick={() => this.handleClose("title")}>Alphabetical</MenuItem>
+              <MenuItem onClick={() => this.handleClose("popularity")}>Popularity</MenuItem>
+              <MenuItem onClick={() => this.handleClose("release_date")}>Release Date</MenuItem>
+              <MenuItem onClick={() => this.handleClose("budget")}>Budget</MenuItem>
             </Menu>
           </div>
           <div className={classes.sortIcon}
             style={{ cursor: "pointer" }}>
-            <SortIcon onClick={this.handleChangeSorting} />
+            <SortIcon onClick={() => this.handleChangeSorting(!this.state.asc)} />
           </div>
         </Toolbar>
       </AppBar>

@@ -11,16 +11,15 @@ import SortIcon from "@material-ui/icons/UnfoldMore";
 import { createMuiTheme } from "@material-ui/core/styles";
 import purple from "@material-ui/core/colors/purple";
 import styled from "styled-components";
-import Button from '@material-ui/core/Button';
-import Menu from '@material-ui/core/Menu';
-import MenuItem from '@material-ui/core/MenuItem';
+import Button from "@material-ui/core/Button";
+import Menu from "@material-ui/core/Menu";
+import MenuItem from "@material-ui/core/MenuItem";
 
 /*
 
 Should be a part of the grid display of movies
 
 */
-
 
 const theme = createMuiTheme({
   palette: {
@@ -30,7 +29,6 @@ const theme = createMuiTheme({
     }
   }
 });
-
 
 const styles = theme => ({
   root: {
@@ -105,41 +103,38 @@ const styles = theme => ({
     right: 50
   },
   sortButton: {
-    color: "white",
+    color: "white"
   },
   sortIcon: {
     position: "absolute",
     right: 20,
-    padding: theme.spacing.unit,
-
+    padding: theme.spacing.unit
   }
 });
 
 class MovieGrid extends React.Component {
-
   state = {
     anchorEl: null,
-    asc: true,
+    asc: true
   };
 
   handleClick = event => {
     this.setState({ anchorEl: event.currentTarget });
   };
 
-  handleClose = (sortBy) => {
+  handleClose = sortBy => {
     this.setState({ anchorEl: null });
-    console.log(sortBy)
+    console.log(sortBy);
   };
 
-  handleChangeSorting = (ascBool) => {
-    this.setState({ asc: ascBool })
-    console.log(ascBool)
+  handleChangeSorting = ascBool => {
+    this.setState({ asc: ascBool });
+    console.log(ascBool);
   };
 
   render() {
     const { classes } = this.props;
     const { anchorEl } = this.state;
-
 
     return (
       <AppBar position="static">
@@ -160,28 +155,17 @@ class MovieGrid extends React.Component {
             />
           </div>
           <div className={classes.sortMenu}>
-            <Button
-              className={classes.sortButton}
-              aria-owns={anchorEl ? 'sort-menu' : undefined}
-              aria-haspopup="true"
-              onClick={this.handleClick}
-            >
+            <Button className={classes.sortButton} aria-owns={anchorEl ? "sort-menu" : undefined} aria-haspopup="true" onClick={this.handleClick}>
               Sort By
             </Button>
-            <Menu
-              id="sort-menu"
-              anchorEl={anchorEl}
-              open={Boolean(anchorEl)}
-              onClose={this.handleClose}
-            >
+            <Menu id="sort-menu" anchorEl={anchorEl} open={Boolean(anchorEl)} onClose={this.handleClose}>
               <MenuItem onClick={() => this.handleClose("title")}>Alphabetical</MenuItem>
               <MenuItem onClick={() => this.handleClose("popularity")}>Popularity</MenuItem>
               <MenuItem onClick={() => this.handleClose("release_date")}>Release Date</MenuItem>
               <MenuItem onClick={() => this.handleClose("budget")}>Budget</MenuItem>
             </Menu>
           </div>
-          <div className={classes.sortIcon}
-            style={{ cursor: "pointer" }}>
+          <div className={classes.sortIcon} style={{ cursor: "pointer" }}>
             <SortIcon onClick={() => this.handleChangeSorting(!this.state.asc)} />
           </div>
         </Toolbar>

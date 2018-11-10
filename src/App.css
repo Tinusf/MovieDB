@@ -34,3 +34,51 @@ body {
     transform: rotate(360deg);
   }
 }
+
+.c3 {
+  border-radius: 5px;
+  padding: 25px;
+  margin: 11px;
+  width: 800px;
+}
+.c3 .c3-axis-x path,
+.c3 .c3-axis-x line,
+.c3 .c3-axis-y path,
+.c3 .c3-axis-y line {
+  stroke: white;
+}
+
+.c3 .c3-axis-x g,
+.c3 .c3-axis-y g,
+.c3 .c3-legend-item-data text,
+.c3 .c3-axis-y-label,
+.c3 .c3-axis-x-label,
+.c3 .c3-legend-item {
+  fill: whitesmoke;
+}
+
+/*when displaying the data on the chart */
+.c3 text.c3-text {
+  fill: whitesmoke !important;
+  stroke: whitesmoke !important;
+  stroke-opacity: 0.3 !important;
+}
+
+/* for the tooltip text color */
+.c3 .c3-tooltip-container {
+  color: darkgrey;
+}
+
+.c3-axis-x text {
+  font-size: 15px;
+}
+.c3-axis-y text {
+  font-size: 15px;
+}
+
+.MuiAppBar-colorPrimary-18 {
+  /*   background-color: #292929 !important;
+ */
+  background-color: #29292978 !important;
+  position: absolute !important;
+}

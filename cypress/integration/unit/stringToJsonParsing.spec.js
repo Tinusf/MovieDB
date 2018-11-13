@@ -1,4 +1,4 @@
-import MovieView from "../../src/components/MovieView";
+import MovieView from "../../../src/components/MovieView";
 const mv = new MovieView();
 describe('MovieView string to json parsing', () => {
   // Alle testene er fordi databasen vår har lagret noen verdier som en string som vi må formatere riktig for så å parse med json. Dette gjør at det ble en litt lang funksjon som vi vil teste at blir riktig alltid her. 

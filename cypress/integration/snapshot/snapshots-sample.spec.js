@@ -1,6 +1,7 @@
 describe('snapshot testing', () => {
     beforeEach(() => {
         cy.visit('http://localhost:3000/')
+            .wait(2000)
     })
     it('create snapshot?', () => {
         console.log('first snapshot...')

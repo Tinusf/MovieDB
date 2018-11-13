@@ -29,7 +29,7 @@ class MovieGridItem extends React.Component {
       background-image: url("./noposter.jpg");
     `;
     return (
-      <Container onClick={this.props.onClick}>
+      <Container onClick={this.props.onClick} className="clickableMovieGridItem">
         <MoviePoster
           style={this.props.ghost && { visibility: "hidden", height: 0 }}
           src={this.props.url} />

@@ -47,7 +47,6 @@ class MovieView extends React.Component {
   };
 
   castCrewStringToJson = inputString => {
-    console.log(inputString);
     // Beklager veldig stygg hack, men noe av dataen i databasen vår er så rart formatert at vi må gjøre dette.
     // Hadde vi startet på nytt hadde vi brukt lenger tid til å finne finere dataset uten alt dette tullet her.
 
@@ -284,6 +283,7 @@ class MovieView extends React.Component {
                 <Section>
                   <Row>
                     <Button
+                      className="imdbButton"
                       style={{ marginRight: 10 }}
                       variant="contained"
                       color="primary"
@@ -292,6 +292,7 @@ class MovieView extends React.Component {
                       IMDB link
                     </Button>
                     <Button
+                      className="tmbdButton"
                       style={{ marginRight: 10 }}
                       variant="contained"
                       color="primary"
@@ -335,7 +336,7 @@ class MovieView extends React.Component {
 
               <MovieDetails>
                 <Section>
-                  <Typography style={{ ...fontStyle }} variant="h4" color="white" gutterBottom>
+                  <Typography style={{ ...fontStyle }} variant="h4" color="white" gutterBottom className="title">
                     {this.state.movieMetaData.title}
                     <Typography style={{ ...fontStyle }} variant="h5" gutterBottom>
                       {this.state.movieMetaData.release_date}
@@ -346,7 +347,7 @@ class MovieView extends React.Component {
                   <Typography style={{ ...fontStyle }} variant="h6" gutterBottom>
                     Overview
                   </Typography>
-                  <Typography style={{ ...fontStyle }} variant="body1" gutterBottom>
+                  <Typography style={{ ...fontStyle }} variant="body1" gutterBottom className="overView">
                     {this.state.movieMetaData.overview}
                   </Typography>
                 </Section>

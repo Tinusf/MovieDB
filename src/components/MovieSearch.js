@@ -174,6 +174,7 @@ class MovieGrid extends React.Component {
                 root: classes.inputRoot,
                 input: classes.inputInput
               }}
+              className="searchInputField"
               onChange={event => {
                 this.setState({ searchText: event.target.value })
                 // this.sendInput(searchText => event.target.value);
@@ -185,10 +186,12 @@ class MovieGrid extends React.Component {
               Sort By
             </Button>
             <Menu id="sort-menu" anchorEl={anchorEl} open={Boolean(anchorEl)} onClose={this.handleClose}>
+              <MenuItem onClick={() => this.handleClose("adult")}>Adult</MenuItem>
               <MenuItem onClick={() => this.handleClose("title")}>Alphabetical</MenuItem>
+              <MenuItem onClick={() => this.handleClose("budget")}>Budget</MenuItem>
               <MenuItem onClick={() => this.handleClose("popularity")}>Popularity</MenuItem>
               <MenuItem onClick={() => this.handleClose("release_date")}>Release Date</MenuItem>
-              <MenuItem onClick={() => this.handleClose("budget")}>Budget</MenuItem>
+              <MenuItem onClick={() => this.handleClose("revenue")}>Revenue</MenuItem>
             </Menu>
           </div>
           <div className={classes.sortIcon} style={{ cursor: "pointer" }}>

@@ -22,7 +22,10 @@ class MovieRating extends React.Component {
   };
 
   submitRating = () => {
-    if (this.rating <= 0) return;
+    if (this.state.rating <= 0) {
+      alert("You must choose a rating before clicking send.")
+      return;
+    }
     const query = `
     mutation addRating($userId: String!, $movieId: Int!, $rating: Float!) {
       addRating(userId: $userId, movieId: $movieId, rating: $rating) {

@@ -1,11 +1,12 @@
 import { combineReducers } from "redux";
-import { SEARCH_MOVIES, SET_SEARCH_SETTINGS } from "../actions/MovieActions";
+import { SEARCH_MOVIES, SET_SEARCH_SETTINGS, SET_VIEW } from "../actions/MovieActions";
 
-let movies = (state = { searchText: "", asc: true, movies: [] }, action) => {
+let movies = (state = { searchText: "", asc: true, movies: [], viewName: "moviegrid" }, action) => {
   // oppdater hvilke filmer som skal vises
   // state = Object.assign({}, state, {
   //   movies: action.movies
   // })
+
   switch (action.type) {
     case SET_SEARCH_SETTINGS + "_FULFILLED":
       return Object.assign({}, state, {
@@ -19,11 +20,14 @@ let movies = (state = { searchText: "", asc: true, movies: [] }, action) => {
       return Object.assign({}, state, {
         searchQuery: action.searchQuery
       });
+    case SET_VIEW:
+      return Object.assign({}, state, {
+        viewName: action.viewName
+      });
     default:
       return state;
   }
 };
-
 
 const movieApp = combineReducers({
   movies

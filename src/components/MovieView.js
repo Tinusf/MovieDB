@@ -9,6 +9,7 @@ import MovieRating from "./MovieRating";
 import StarRate from "@material-ui/icons/StarRate";
 import C3Chart from "react-c3js";
 import CircularProgress from "@material-ui/core/CircularProgress";
+import { connect } from "react-redux";
 
 import "c3/c3.css";
 import { format } from "url";
@@ -198,20 +199,31 @@ class MovieView extends React.Component {
     const Container = styled.div`
       background-size: cover;
       background-size: cover;
-      background-position: bottom;
+      background-position: center;
+      height: 100%;
     `;
 
     const MoviePoster = styled.img`
-      height: 500px;
+      max-width: 100%;
+      max-height: 500px;
       margin: 30px;
+      width: 300px;
       margin-left: 0px;
       border-radius: 4px;
       box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12);
     `;
 
+    const LeftSection = styled.div`
+      max-width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-content: flex-start;
+    `;
+
     const MovieContainer = styled.div`
       background: radial-gradient(circle at 20% 50%, rgba(77, 50, 77, 0.85) 0%, rgba(49, 70, 81, 0.68) 100%);
-      height: 100vh;
+      height: 100%;
+      min-height: 100vh
       padding-top: 70px;
     `;
 
@@ -220,10 +232,13 @@ class MovieView extends React.Component {
       padding-top: 50px;
       width: 80%;
       display: flex;
+      justify-content: center
+      flex-wrap: wrap;
     `;
     const MovieDetails = styled.div`
       margin: 30px;
       color: white;
+      max-width: 90%;
     `;
     const Row = styled.div`
       display: flex;
@@ -236,6 +251,7 @@ class MovieView extends React.Component {
       color: "white",
       textAlign: "left"
     };
+
     let crewRow;
     if (this.state.movieCrew) {
       crewRow = this.state.movieCrew.map((crew, index) => {
@@ -278,7 +294,7 @@ class MovieView extends React.Component {
         <MovieContainer>
           {this.state.movieMetaData && (
             <MovieInfo>
-              <div>
+              <LeftSection>
                 <MoviePoster src={"https://image.tmdb.org/t/p/w1280/" + this.state.movieMetaData.poster_path} />
                 <Section>
                   <Row>
@@ -303,7 +319,7 @@ class MovieView extends React.Component {
                 {this.state.graphData && (
                   <Section>
                     <Row style={{ alignItems: "flex-end" }}>
-                      <StarRate style={{ fontSize: 65, color: "white" }} />
+                      <StarRate style={{ fontSize: 65, color: this.state.myRating ? "#ff9800" : "white" }} />
                       <Typography style={{ ...fontStyle, fontSize: 30 }} variant="subtitle2" gutterBottom>
                         {this.calculateAverageRating()}
                       </Typography>
@@ -330,7 +346,7 @@ class MovieView extends React.Component {
                     )}
                   </Section>
                 )}
-              </div>
+              </LeftSection>
 
               <MovieDetails>
                 <Section>
@@ -345,7 +361,7 @@ class MovieView extends React.Component {
                   <Typography style={{ ...fontStyle }} variant="h6" gutterBottom>
                     Overview
                   </Typography>
-                  <Typography style={{ ...fontStyle }} variant="body1" gutterBottom>
+                  <Typography style={{ ...fontStyle, width: "700px", maxWidth: "100%" }} variant="body1" gutterBottom>
                     {this.state.movieMetaData.overview}
                   </Typography>
                 </Section>
@@ -367,14 +383,14 @@ class MovieView extends React.Component {
                 )}
                 <Section>
                   <Row style={{ color: "black" }}>
-                    {this.state.graphData && <C3Chart data={this.state.graphData} />}
+                    {this.state.graphData && <C3Chart data={this.state.graphData} style={{ maxWidth: "100%", margin: "0px", padding: "0px" }} />}
                     {!this.state.graphData && <CircularProgress style={{ color: "white" }} />}
                   </Row>
                 </Section>
               </MovieDetails>
             </MovieInfo>
           )}
-          {!this.state.movieMetaData && <p>LOADING</p>}
+          {!this.state.movieMetaData && <CircularProgress style={{ color: "white" }} />}
         </MovieContainer>
       </Container>
     );
@@ -405,4 +421,4 @@ class MovieView extends React.Component {
   }
 }
 
-export default MovieView;
+export default connect(state => ({ viewName: state.movies.viewName }))(MovieView);

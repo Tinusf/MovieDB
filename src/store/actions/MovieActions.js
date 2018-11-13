@@ -1,5 +1,4 @@
-import { runGraphQLQuery } from '../../utils/Utils'
-
+import { runGraphQLQuery } from "../../utils/Utils";
 
 /*
  * action types
@@ -7,7 +6,7 @@ import { runGraphQLQuery } from '../../utils/Utils'
 
 export const SEARCH_MOVIES = "SEARCH_MOVIES";
 export const SET_SEARCH_SETTINGS = "SET_SEARCH_SETTINGS";
-
+export const SET_VIEW = "SET_VIEW";
 
 /*
  * action creators
@@ -15,6 +14,10 @@ export const SET_SEARCH_SETTINGS = "SET_SEARCH_SETTINGS";
 
 export function searchMovies(searchQuery) {
   return { type: SEARCH_MOVIES, searchQuery };
+}
+
+export function setView(viewName) {
+  return { type: SET_VIEW, viewName };
 }
 
 export function setSearchSettings(searchText, asc, pagenr, ordering) {

@@ -76,8 +76,9 @@ class MovieView extends React.Component {
         index++;
       }
       if (howManySingly === 0) {
-        // Da er det navn som 'Florencia "Flo" Fuentes' og da kan vi bare fjerne alle "ene.
-        inputString = inputString.split('"').join("");
+        // Da er det navn som 'Florencia "Flo" Fuentes' og da kan vi bare fjerne de to første "ene.
+        inputString = inputString.replace('"', "");
+        inputString = inputString.replace('"', "");
 
         doublyIndex = inputString.indexOf('"');
         continue;

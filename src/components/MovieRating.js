@@ -36,6 +36,7 @@ class MovieRating extends React.Component {
   render() {
     const stars = [...Array(10)].map((n, i) => (
       <StarRate
+        key={i}
         onMouseOver={() => this.updateRating(i)}
         onClick={() => this.setFinal(i)}
         style={{ fontSize: 30, color: this.state.rating >= i ? "white" : "gray" }}

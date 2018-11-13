@@ -131,7 +131,6 @@ class MovieGrid extends React.Component {
   handleClose = sortBy => {
     this.setState({ anchorEl: null });
     this.setState({ ordering: sortBy });
-    console.log(sortBy)
   };
 
   handleChangeSorting = (ascBool) => {
@@ -139,7 +138,6 @@ class MovieGrid extends React.Component {
   };
 
   componentDidUpdate() {
-    console.log(this.state.ordering);
     this.props.dispatch(setSearchSettings(this.state.searchText, this.state.asc, this.state.pagenr, this.state.ordering));
   }
 

@@ -16,7 +16,6 @@ const Grid = styled.div`
   justify-content: center;
   flex-wrap: wrap;
   margin: auto;
-  padding-top: 70px;
 `;
 
 class MovieGrid extends React.Component {
@@ -28,8 +27,9 @@ class MovieGrid extends React.Component {
   render() {
     let movieItems;
     if (this.props.moviesData) {
-      movieItems = this.props.moviesData.map(movie =>
+      movieItems = this.props.moviesData.map((movie, i) =>
         <MovieGridItem
+          key={i}
           name={movie.title}
           url={"https://image.tmdb.org/t/p/w1280/" + movie.poster_path}
           movieId={movie.id}
@@ -37,9 +37,8 @@ class MovieGrid extends React.Component {
         />
       );
       // For å få alle fint til venstre så må vi legge til noen ghost items.
-      movieItems.push(Array.from(new Array(10), item => <MovieGridItem ghost={true} url={"./noposter.png"} />));
+      movieItems.push(Array.from(new Array(10), (item, index) => <MovieGridItem ghost={true} url={"./noposter.png"} key={index + 1000} />));
     }
-    console.log(this.state.chosenMovieId);
 
     return (
       <div>

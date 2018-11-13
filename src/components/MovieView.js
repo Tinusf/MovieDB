@@ -26,6 +26,7 @@ class MovieView extends React.Component {
     this.state = {};
   }
 
+  // graphql query for å hente data for en bestemt film
   runMovieQuery = movieId => {
     const query = `
     query MovieView_Query($movieId: Int!) {
@@ -127,6 +128,7 @@ class MovieView extends React.Component {
     return "-";
   };
 
+  // graphql query for å hente ratingen den nåværende brukeren har gitt en bestemt film
   getYourRatingForAMovieQuery = (movieId, userId) => {
     const query = `
     query rating($movieId: Int!, $userId: String!) {
@@ -142,6 +144,7 @@ class MovieView extends React.Component {
     });
   };
 
+  // graphql query for å hente ratings for en bestemt film
   getRatingsForAMovieQuery = movieId => {
     const query2 = `
     query ratingsForAMovieQuery($movieId: Int!) {
@@ -173,6 +176,7 @@ class MovieView extends React.Component {
       });
   };
 
+  // graphql query for å hente cast og crew for en bestemt film
   runCastCrewQuery = movieId => {
     const query = `
     query castAndCrewQuery($movieId: Int!) {

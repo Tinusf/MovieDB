@@ -33,7 +33,7 @@ class MovieGridItem extends React.Component {
         <MoviePoster
           style={this.props.ghost && { visibility: "hidden", height: 0 }}
           src={this.props.url} />
-        <Typography style={{ color: "white", margin: 0, maxWidth: 200, height: 50 }} variant="subtitle1" gutterBottom>
+        <Typography style={{ color: "white", margin: 0, maxWidth: 200, height: 50 }} variant="subtitle1" gutterBottom className="movieTitle">
           {this.props.name}
         </Typography>
       </Container>

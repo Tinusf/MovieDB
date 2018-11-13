@@ -104,7 +104,7 @@ module.exports = {
                           {
                             "tagName": "button",
                             "attributes": {
-                              "class": "MuiButtonBase-root-141 MuiButton-root-115 MuiButton-text-117 MuiButton-flat-120 MovieGrid-sortButton-12",
+                              "class": "MuiButtonBase-root-141 MuiButton-root-115 MuiButton-text-117 MuiButton-flat-120 MovieGrid-sortButton-12 sortButton",
                               "tabindex": "0",
                               "type": "button",
                               "aria-haspopup": "true"
@@ -142,7 +142,7 @@ module.exports = {
                           {
                             "tagName": "svg",
                             "attributes": {
-                              "class": "MuiSvgIcon-root-89",
+                              "class": "MuiSvgIcon-root-89 sortIcon",
                               "focusable": "false",
                               "viewBox": "0 0 24 24",
                               "aria-hidden": "true",
@@ -195,7 +195,7 @@ module.exports = {
                           {
                             "tagName": "h6",
                             "attributes": {
-                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81",
+                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81 movieTitle",
                               "style": "color: white; margin: 0px; max-width: 200px; height: 50px;"
                             },
                             "childNodes": [
@@ -223,7 +223,7 @@ module.exports = {
                           {
                             "tagName": "h6",
                             "attributes": {
-                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81",
+                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81 movieTitle",
                               "style": "color: white; margin: 0px; max-width: 200px; height: 50px;"
                             },
                             "childNodes": [
@@ -251,7 +251,7 @@ module.exports = {
                           {
                             "tagName": "h6",
                             "attributes": {
-                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81",
+                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81 movieTitle",
                               "style": "color: white; margin: 0px; max-width: 200px; height: 50px;"
                             },
                             "childNodes": [
@@ -279,7 +279,7 @@ module.exports = {
                           {
                             "tagName": "h6",
                             "attributes": {
-                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81",
+                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81 movieTitle",
                               "style": "color: white; margin: 0px; max-width: 200px; height: 50px;"
                             },
                             "childNodes": [
@@ -307,7 +307,7 @@ module.exports = {
                           {
                             "tagName": "h6",
                             "attributes": {
-                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81",
+                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81 movieTitle",
                               "style": "color: white; margin: 0px; max-width: 200px; height: 50px;"
                             },
                             "childNodes": [
@@ -335,7 +335,7 @@ module.exports = {
                           {
                             "tagName": "h6",
                             "attributes": {
-                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81",
+                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81 movieTitle",
                               "style": "color: white; margin: 0px; max-width: 200px; height: 50px;"
                             },
                             "childNodes": [
@@ -363,7 +363,7 @@ module.exports = {
                           {
                             "tagName": "h6",
                             "attributes": {
-                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81",
+                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81 movieTitle",
                               "style": "color: white; margin: 0px; max-width: 200px; height: 50px;"
                             },
                             "childNodes": [
@@ -391,7 +391,7 @@ module.exports = {
                           {
                             "tagName": "h6",
                             "attributes": {
-                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81",
+                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81 movieTitle",
                               "style": "color: white; margin: 0px; max-width: 200px; height: 50px;"
                             },
                             "childNodes": [
@@ -419,7 +419,7 @@ module.exports = {
                           {
                             "tagName": "h6",
                             "attributes": {
-                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81",
+                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81 movieTitle",
                               "style": "color: white; margin: 0px; max-width: 200px; height: 50px;"
                             },
                             "childNodes": [
@@ -447,7 +447,7 @@ module.exports = {
                           {
                             "tagName": "h6",
                             "attributes": {
-                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81",
+                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81 movieTitle",
                               "style": "color: white; margin: 0px; max-width: 200px; height: 50px;"
                             },
                             "childNodes": [
@@ -475,7 +475,7 @@ module.exports = {
                           {
                             "tagName": "h6",
                             "attributes": {
-                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81",
+                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81 movieTitle",
                               "style": "color: white; margin: 0px; max-width: 200px; height: 50px;"
                             },
                             "childNodes": [
@@ -503,7 +503,7 @@ module.exports = {
                           {
                             "tagName": "h6",
                             "attributes": {
-                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81",
+                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81 movieTitle",
                               "style": "color: white; margin: 0px; max-width: 200px; height: 50px;"
                             },
                             "childNodes": [
@@ -531,7 +531,7 @@ module.exports = {
                           {
                             "tagName": "h6",
                             "attributes": {
-                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81",
+                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81 movieTitle",
                               "style": "color: white; margin: 0px; max-width: 200px; height: 50px;"
                             },
                             "childNodes": [
@@ -559,7 +559,7 @@ module.exports = {
                           {
                             "tagName": "h6",
                             "attributes": {
-                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81",
+                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81 movieTitle",
                               "style": "color: white; margin: 0px; max-width: 200px; height: 50px;"
                             },
                             "childNodes": [
@@ -587,7 +587,7 @@ module.exports = {
                           {
                             "tagName": "h6",
                             "attributes": {
-                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81",
+                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81 movieTitle",
                               "style": "color: white; margin: 0px; max-width: 200px; height: 50px;"
                             },
                             "childNodes": [
@@ -615,7 +615,7 @@ module.exports = {
                           {
                             "tagName": "h6",
                             "attributes": {
-                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81",
+                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81 movieTitle",
                               "style": "color: white; margin: 0px; max-width: 200px; height: 50px;"
                             },
                             "childNodes": [
@@ -643,7 +643,7 @@ module.exports = {
                           {
                             "tagName": "h6",
                             "attributes": {
-                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81",
+                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81 movieTitle",
                               "style": "color: white; margin: 0px; max-width: 200px; height: 50px;"
                             },
                             "childNodes": [
@@ -671,7 +671,7 @@ module.exports = {
                           {
                             "tagName": "h6",
                             "attributes": {
-                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81",
+                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81 movieTitle",
                               "style": "color: white; margin: 0px; max-width: 200px; height: 50px;"
                             },
                             "childNodes": [
@@ -699,7 +699,7 @@ module.exports = {
                           {
                             "tagName": "h6",
                             "attributes": {
-                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81",
+                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81 movieTitle",
                               "style": "color: white; margin: 0px; max-width: 200px; height: 50px;"
                             },
                             "childNodes": [
@@ -727,7 +727,7 @@ module.exports = {
                           {
                             "tagName": "h6",
                             "attributes": {
-                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81",
+                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81 movieTitle",
                               "style": "color: white; margin: 0px; max-width: 200px; height: 50px;"
                             },
                             "childNodes": [
@@ -755,7 +755,7 @@ module.exports = {
                           {
                             "tagName": "h6",
                             "attributes": {
-                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81",
+                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81 movieTitle",
                               "style": "color: white; margin: 0px; max-width: 200px; height: 50px;"
                             },
                             "childNodes": [
@@ -783,7 +783,7 @@ module.exports = {
                           {
                             "tagName": "h6",
                             "attributes": {
-                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81",
+                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81 movieTitle",
                               "style": "color: white; margin: 0px; max-width: 200px; height: 50px;"
                             },
                             "childNodes": [
@@ -811,7 +811,7 @@ module.exports = {
                           {
                             "tagName": "h6",
                             "attributes": {
-                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81",
+                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81 movieTitle",
                               "style": "color: white; margin: 0px; max-width: 200px; height: 50px;"
                             },
                             "childNodes": [
@@ -839,7 +839,7 @@ module.exports = {
                           {
                             "tagName": "h6",
                             "attributes": {
-                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81",
+                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81 movieTitle",
                               "style": "color: white; margin: 0px; max-width: 200px; height: 50px;"
                             },
                             "childNodes": [
@@ -867,7 +867,7 @@ module.exports = {
                           {
                             "tagName": "h6",
                             "attributes": {
-                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81",
+                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81 movieTitle",
                               "style": "color: white; margin: 0px; max-width: 200px; height: 50px;"
                             },
                             "childNodes": [
@@ -895,7 +895,7 @@ module.exports = {
                           {
                             "tagName": "h6",
                             "attributes": {
-                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81",
+                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81 movieTitle",
                               "style": "color: white; margin: 0px; max-width: 200px; height: 50px;"
                             },
                             "childNodes": [
@@ -923,7 +923,7 @@ module.exports = {
                           {
                             "tagName": "h6",
                             "attributes": {
-                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81",
+                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81 movieTitle",
                               "style": "color: white; margin: 0px; max-width: 200px; height: 50px;"
                             },
                             "childNodes": [
@@ -951,7 +951,7 @@ module.exports = {
                           {
                             "tagName": "h6",
                             "attributes": {
-                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81",
+                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81 movieTitle",
                               "style": "color: white; margin: 0px; max-width: 200px; height: 50px;"
                             },
                             "childNodes": [
@@ -979,7 +979,7 @@ module.exports = {
                           {
                             "tagName": "h6",
                             "attributes": {
-                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81",
+                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81 movieTitle",
                               "style": "color: white; margin: 0px; max-width: 200px; height: 50px;"
                             },
                             "childNodes": [
@@ -1007,7 +1007,7 @@ module.exports = {
                           {
                             "tagName": "h6",
                             "attributes": {
-                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81",
+                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81 movieTitle",
                               "style": "color: white; margin: 0px; max-width: 200px; height: 50px;"
                             },
                             "childNodes": [
@@ -1035,7 +1035,7 @@ module.exports = {
                           {
                             "tagName": "h6",
                             "attributes": {
-                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81",
+                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81 movieTitle",
                               "style": "color: white; margin: 0px; max-width: 200px; height: 50px;"
                             },
                             "childNodes": [
@@ -1063,7 +1063,7 @@ module.exports = {
                           {
                             "tagName": "h6",
                             "attributes": {
-                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81",
+                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81 movieTitle",
                               "style": "color: white; margin: 0px; max-width: 200px; height: 50px;"
                             },
                             "childNodes": [
@@ -1091,7 +1091,7 @@ module.exports = {
                           {
                             "tagName": "h6",
                             "attributes": {
-                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81",
+                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81 movieTitle",
                               "style": "color: white; margin: 0px; max-width: 200px; height: 50px;"
                             },
                             "childNodes": [
@@ -1119,7 +1119,7 @@ module.exports = {
                           {
                             "tagName": "h6",
                             "attributes": {
-                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81",
+                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81 movieTitle",
                               "style": "color: white; margin: 0px; max-width: 200px; height: 50px;"
                             },
                             "childNodes": [
@@ -1147,7 +1147,7 @@ module.exports = {
                           {
                             "tagName": "h6",
                             "attributes": {
-                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81",
+                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81 movieTitle",
                               "style": "color: white; margin: 0px; max-width: 200px; height: 50px;"
                             },
                             "childNodes": [
@@ -1176,7 +1176,7 @@ module.exports = {
                           {
                             "tagName": "h6",
                             "attributes": {
-                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81",
+                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81 movieTitle",
                               "style": "color: white; margin: 0px; max-width: 200px; height: 50px;"
                             }
                           }
@@ -1199,7 +1199,7 @@ module.exports = {
                           {
                             "tagName": "h6",
                             "attributes": {
-                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81",
+                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81 movieTitle",
                               "style": "color: white; margin: 0px; max-width: 200px; height: 50px;"
                             }
                           }
@@ -1222,7 +1222,7 @@ module.exports = {
                           {
                             "tagName": "h6",
                             "attributes": {
-                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81",
+                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81 movieTitle",
                               "style": "color: white; margin: 0px; max-width: 200px; height: 50px;"
                             }
                           }
@@ -1245,7 +1245,7 @@ module.exports = {
                           {
                             "tagName": "h6",
                             "attributes": {
-                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81",
+                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81 movieTitle",
                               "style": "color: white; margin: 0px; max-width: 200px; height: 50px;"
                             }
                           }
@@ -1268,7 +1268,7 @@ module.exports = {
                           {
                             "tagName": "h6",
                             "attributes": {
-                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81",
+                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81 movieTitle",
                               "style": "color: white; margin: 0px; max-width: 200px; height: 50px;"
                             }
                           }
@@ -1291,7 +1291,7 @@ module.exports = {
                           {
                             "tagName": "h6",
                             "attributes": {
-                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81",
+                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81 movieTitle",
                               "style": "color: white; margin: 0px; max-width: 200px; height: 50px;"
                             }
                           }
@@ -1314,7 +1314,7 @@ module.exports = {
                           {
                             "tagName": "h6",
                             "attributes": {
-                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81",
+                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81 movieTitle",
                               "style": "color: white; margin: 0px; max-width: 200px; height: 50px;"
                             }
                           }
@@ -1337,7 +1337,7 @@ module.exports = {
                           {
                             "tagName": "h6",
                             "attributes": {
-                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81",
+                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81 movieTitle",
                               "style": "color: white; margin: 0px; max-width: 200px; height: 50px;"
                             }
                           }
@@ -1360,7 +1360,7 @@ module.exports = {
                           {
                             "tagName": "h6",
                             "attributes": {
-                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81",
+                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81 movieTitle",
                               "style": "color: white; margin: 0px; max-width: 200px; height: 50px;"
                             }
                           }
@@ -1383,7 +1383,7 @@ module.exports = {
                           {
                             "tagName": "h6",
                             "attributes": {
-                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81",
+                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81 movieTitle",
                               "style": "color: white; margin: 0px; max-width: 200px; height: 50px;"
                             }
                           }
@@ -1502,7 +1502,7 @@ module.exports = {
                           {
                             "tagName": "button",
                             "attributes": {
-                              "class": "MuiButtonBase-root-141 MuiButton-root-115 MuiButton-text-117 MuiButton-flat-120 MovieGrid-sortButton-12",
+                              "class": "MuiButtonBase-root-141 MuiButton-root-115 MuiButton-text-117 MuiButton-flat-120 MovieGrid-sortButton-12 sortButton",
                               "tabindex": "0",
                               "type": "button",
                               "aria-haspopup": "true"
@@ -1540,7 +1540,7 @@ module.exports = {
                           {
                             "tagName": "svg",
                             "attributes": {
-                              "class": "MuiSvgIcon-root-89",
+                              "class": "MuiSvgIcon-root-89 sortIcon",
                               "focusable": "false",
                               "viewBox": "0 0 24 24",
                               "aria-hidden": "true",
@@ -1593,7 +1593,7 @@ module.exports = {
                           {
                             "tagName": "h6",
                             "attributes": {
-                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81",
+                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81 movieTitle",
                               "style": "color: white; margin: 0px; max-width: 200px; height: 50px;"
                             },
                             "childNodes": [
@@ -1622,7 +1622,7 @@ module.exports = {
                           {
                             "tagName": "h6",
                             "attributes": {
-                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81",
+                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81 movieTitle",
                               "style": "color: white; margin: 0px; max-width: 200px; height: 50px;"
                             }
                           }
@@ -1645,7 +1645,7 @@ module.exports = {
                           {
                             "tagName": "h6",
                             "attributes": {
-                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81",
+                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81 movieTitle",
                               "style": "color: white; margin: 0px; max-width: 200px; height: 50px;"
                             }
                           }
@@ -1668,7 +1668,7 @@ module.exports = {
                           {
                             "tagName": "h6",
                             "attributes": {
-                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81",
+                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81 movieTitle",
                               "style": "color: white; margin: 0px; max-width: 200px; height: 50px;"
                             }
                           }
@@ -1691,7 +1691,7 @@ module.exports = {
                           {
                             "tagName": "h6",
                             "attributes": {
-                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81",
+                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81 movieTitle",
                               "style": "color: white; margin: 0px; max-width: 200px; height: 50px;"
                             }
                           }
@@ -1714,7 +1714,7 @@ module.exports = {
                           {
                             "tagName": "h6",
                             "attributes": {
-                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81",
+                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81 movieTitle",
                               "style": "color: white; margin: 0px; max-width: 200px; height: 50px;"
                             }
                           }
@@ -1737,7 +1737,7 @@ module.exports = {
                           {
                             "tagName": "h6",
                             "attributes": {
-                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81",
+                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81 movieTitle",
                               "style": "color: white; margin: 0px; max-width: 200px; height: 50px;"
                             }
                           }
@@ -1760,7 +1760,7 @@ module.exports = {
                           {
                             "tagName": "h6",
                             "attributes": {
-                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81",
+                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81 movieTitle",
                               "style": "color: white; margin: 0px; max-width: 200px; height: 50px;"
                             }
                           }
@@ -1783,7 +1783,7 @@ module.exports = {
                           {
                             "tagName": "h6",
                             "attributes": {
-                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81",
+                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81 movieTitle",
                               "style": "color: white; margin: 0px; max-width: 200px; height: 50px;"
                             }
                           }
@@ -1806,7 +1806,7 @@ module.exports = {
                           {
                             "tagName": "h6",
                             "attributes": {
-                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81",
+                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81 movieTitle",
                               "style": "color: white; margin: 0px; max-width: 200px; height: 50px;"
                             }
                           }
@@ -1829,7 +1829,7 @@ module.exports = {
                           {
                             "tagName": "h6",
                             "attributes": {
-                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81",
+                              "class": "MuiTypography-root-54 MuiTypography-subtitle1-72 MuiTypography-gutterBottom-81 movieTitle",
                               "style": "color: white; margin: 0px; max-width: 200px; height: 50px;"
                             }
                           }
@@ -1946,7 +1946,7 @@ module.exports = {
                           {
                             "tagName": "button",
                             "attributes": {
-                              "class": "MuiButtonBase-root-141 MuiButton-root-115 MuiButton-text-117 MuiButton-flat-120 MovieGrid-sortButton-12",
+                              "class": "MuiButtonBase-root-141 MuiButton-root-115 MuiButton-text-117 MuiButton-flat-120 MovieGrid-sortButton-12 sortButton",
                               "tabindex": "0",
                               "type": "button",
                               "aria-haspopup": "true"
@@ -1984,7 +1984,7 @@ module.exports = {
                           {
                             "tagName": "svg",
                             "attributes": {
-                              "class": "MuiSvgIcon-root-89",
+                              "class": "MuiSvgIcon-root-89 sortIcon",
                               "focusable": "false",
                               "viewBox": "0 0 24 24",
                               "aria-hidden": "true",
@@ -2824,7 +2824,7 @@ module.exports = {
                                                             "tagName": "rect",
                                                             "attributes": {
                                                               "width": "798",
-                                                              "height": "263"
+                                                              "height": "260.40625"
                                                             }
                                                           }
                                                         ]
@@ -2841,7 +2841,7 @@ module.exports = {
                                                               "x": "-51",
                                                               "y": "-20",
                                                               "width": "880",
-                                                              "height": "73"
+                                                              "height": "75.59375"
                                                             }
                                                           }
                                                         ]
@@ -2858,7 +2858,7 @@ module.exports = {
                                                               "x": "-49",
                                                               "y": "-4",
                                                               "width": "70",
-                                                              "height": "287"
+                                                              "height": "284.40625"
                                                             }
                                                           }
                                                         ]
@@ -2873,7 +2873,7 @@ module.exports = {
                                                             "tagName": "rect",
                                                             "attributes": {
                                                               "width": "798",
-                                                              "height": "263"
+                                                              "height": "260.40625"
                                                             }
                                                           }
                                                         ]
@@ -2907,7 +2907,7 @@ module.exports = {
                                                           "text-anchor": "middle",
                                                           "dominant-baseline": "middle",
                                                           "x": "399",
-                                                          "y": "131.5"
+                                                          "y": "130.203125"
                                                         }
                                                       },
                                                       {
@@ -2915,7 +2915,7 @@ module.exports = {
                                                         "attributes": {
                                                           "class": "c3-zoom-rect",
                                                           "width": "798",
-                                                          "height": "263",
+                                                          "height": "260.40625",
                                                           "style": "opacity: 0;"
                                                         }
                                                       },
@@ -2948,7 +2948,7 @@ module.exports = {
                                                                   "x1": "-10",
                                                                   "x2": "-10",
                                                                   "y1": "0",
-                                                                  "y2": "263",
+                                                                  "y2": "260.40625",
                                                                   "style": "visibility: hidden;"
                                                                 }
                                                               }
@@ -2977,7 +2977,7 @@ module.exports = {
                                                                   "x": "20",
                                                                   "y": "0",
                                                                   "width": "60",
-                                                                  "height": "263"
+                                                                  "height": "260.40625"
                                                                 }
                                                               },
                                                               {
@@ -2987,7 +2987,7 @@ module.exports = {
                                                                   "x": "80",
                                                                   "y": "0",
                                                                   "width": "80",
-                                                                  "height": "263"
+                                                                  "height": "260.40625"
                                                                 }
                                                               },
                                                               {
@@ -2997,7 +2997,7 @@ module.exports = {
                                                                   "x": "160",
                                                                   "y": "0",
                                                                   "width": "80",
-                                                                  "height": "263"
+                                                                  "height": "260.40625"
                                                                 }
                                                               },
                                                               {
@@ -3007,7 +3007,7 @@ module.exports = {
                                                                   "x": "240",
                                                                   "y": "0",
                                                                   "width": "80",
-                                                                  "height": "263"
+                                                                  "height": "260.40625"
                                                                 }
                                                               },
                                                               {
@@ -3017,7 +3017,7 @@ module.exports = {
                                                                   "x": "320",
                                                                   "y": "0",
                                                                   "width": "79.5",
-                                                                  "height": "263"
+                                                                  "height": "260.40625"
                                                                 }
                                                               },
                                                               {
@@ -3027,7 +3027,7 @@ module.exports = {
                                                                   "x": "399.5",
                                                                   "y": "0",
                                                                   "width": "79.5",
-                                                                  "height": "263"
+                                                                  "height": "260.40625"
                                                                 }
                                                               },
                                                               {
@@ -3037,7 +3037,7 @@ module.exports = {
                                                                   "x": "479",
                                                                   "y": "0",
                                                                   "width": "80",
-                                                                  "height": "263"
+                                                                  "height": "260.40625"
                                                                 }
                                                               },
                                                               {
@@ -3047,7 +3047,7 @@ module.exports = {
                                                                   "x": "559",
                                                                   "y": "0",
                                                                   "width": "80",
-                                                                  "height": "263"
+                                                                  "height": "260.40625"
                                                                 }
                                                               },
                                                               {
@@ -3057,7 +3057,7 @@ module.exports = {
                                                                   "x": "639",
                                                                   "y": "0",
                                                                   "width": "80",
-                                                                  "height": "263"
+                                                                  "height": "260.40625"
                                                                 }
                                                               },
                                                               {
@@ -3067,7 +3067,7 @@ module.exports = {
                                                                   "x": "719",
                                                                   "y": "0",
                                                                   "width": "59.5",
-                                                                  "height": "263"
+                                                                  "height": "260.40625"
                                                                 }
                                                               }
                                                             ]
@@ -3096,7 +3096,7 @@ module.exports = {
                                                                         "tagName": "path",
                                                                         "attributes": {
                                                                           "class": " c3-shape c3-shape-0 c3-bar c3-bar-0",
-                                                                          "d": "M 16.060000000000002,263 L16.060000000000002,263 L63.94,263 L63.94,263 z",
+                                                                          "d": "M 16.060000000000002,260.40625 L16.060000000000002,260.40625 L63.94,260.40625 L63.94,260.40625 z",
                                                                           "style": "stroke: rgb(255, 255, 255); fill: rgb(255, 255, 255); opacity: 1;"
                                                                         }
                                                                       },
@@ -3104,7 +3104,7 @@ module.exports = {
                                                                         "tagName": "path",
                                                                         "attributes": {
                                                                           "class": " c3-shape c3-shape-1 c3-bar c3-bar-1",
-                                                                          "d": "M 96.06,263 L96.06,263 L143.94,263 L143.94,263 z",
+                                                                          "d": "M 96.06,260.40625 L96.06,260.40625 L143.94,260.40625 L143.94,260.40625 z",
                                                                           "style": "stroke: rgb(255, 255, 255); fill: rgb(255, 255, 255); opacity: 1;"
                                                                         }
                                                                       },
@@ -3112,7 +3112,7 @@ module.exports = {
                                                                         "tagName": "path",
                                                                         "attributes": {
                                                                           "class": " c3-shape c3-shape-2 c3-bar c3-bar-2",
-                                                                          "d": "M 176.06,263 L176.06,263 L223.94,263 L223.94,263 z",
+                                                                          "d": "M 176.06,260.40625 L176.06,260.40625 L223.94,260.40625 L223.94,260.40625 z",
                                                                           "style": "stroke: rgb(255, 255, 255); fill: rgb(255, 255, 255); opacity: 1;"
                                                                         }
                                                                       },
@@ -3120,7 +3120,7 @@ module.exports = {
                                                                         "tagName": "path",
                                                                         "attributes": {
                                                                           "class": " c3-shape c3-shape-3 c3-bar c3-bar-3",
-                                                                          "d": "M 256.06,263 L256.06,263 L303.94,263 L303.94,263 z",
+                                                                          "d": "M 256.06,260.40625 L256.06,260.40625 L303.94,260.40625 L303.94,260.40625 z",
                                                                           "style": "stroke: rgb(255, 255, 255); fill: rgb(255, 255, 255); opacity: 1;"
                                                                         }
                                                                       },
@@ -3128,7 +3128,7 @@ module.exports = {
                                                                         "tagName": "path",
                                                                         "attributes": {
                                                                           "class": " c3-shape c3-shape-4 c3-bar c3-bar-4",
-                                                                          "d": "M 336.06,263 L336.06,263 L383.94,263 L383.94,263 z",
+                                                                          "d": "M 336.06,260.40625 L336.06,260.40625 L383.94,260.40625 L383.94,260.40625 z",
                                                                           "style": "stroke: rgb(255, 255, 255); fill: rgb(255, 255, 255); opacity: 1;"
                                                                         }
                                                                       },
@@ -3136,7 +3136,7 @@ module.exports = {
                                                                         "tagName": "path",
                                                                         "attributes": {
                                                                           "class": " c3-shape c3-shape-5 c3-bar c3-bar-5",
-                                                                          "d": "M 415.06,263 L415.06,263 L462.94,263 L462.94,263 z",
+                                                                          "d": "M 415.06,260.40625 L415.06,260.40625 L462.94,260.40625 L462.94,260.40625 z",
                                                                           "style": "stroke: rgb(255, 255, 255); fill: rgb(255, 255, 255); opacity: 1;"
                                                                         }
                                                                       },
@@ -3144,7 +3144,7 @@ module.exports = {
                                                                         "tagName": "path",
                                                                         "attributes": {
                                                                           "class": " c3-shape c3-shape-6 c3-bar c3-bar-6",
-                                                                          "d": "M 495.06,263 L495.06,263 L542.94,263 L542.94,263 z",
+                                                                          "d": "M 495.06,260.40625 L495.06,260.40625 L542.94,260.40625 L542.94,260.40625 z",
                                                                           "style": "stroke: rgb(255, 255, 255); fill: rgb(255, 255, 255); opacity: 1;"
                                                                         }
                                                                       },
@@ -3152,7 +3152,7 @@ module.exports = {
                                                                         "tagName": "path",
                                                                         "attributes": {
                                                                           "class": " c3-shape c3-shape-7 c3-bar c3-bar-7",
-                                                                          "d": "M 575.06,263 L575.06,24.818181818181827 L622.9399999999999,24.818181818181827 L622.9399999999999,263 z",
+                                                                          "d": "M 575.06,260.40625 L575.06,24.582386363636374 L622.9399999999999,24.582386363636374 L622.9399999999999,260.40625 z",
                                                                           "style": "stroke: rgb(255, 255, 255); fill: rgb(255, 255, 255); opacity: 1;"
                                                                         }
                                                                       },
@@ -3160,7 +3160,7 @@ module.exports = {
                                                                         "tagName": "path",
                                                                         "attributes": {
                                                                           "class": " c3-shape c3-shape-8 c3-bar c3-bar-8",
-                                                                          "d": "M 655.06,263 L655.06,263 L702.9399999999999,263 L702.9399999999999,263 z",
+                                                                          "d": "M 655.06,260.40625 L655.06,260.40625 L702.9399999999999,260.40625 L702.9399999999999,260.40625 z",
                                                                           "style": "stroke: rgb(255, 255, 255); fill: rgb(255, 255, 255); opacity: 1;"
                                                                         }
                                                                       },
@@ -3168,7 +3168,7 @@ module.exports = {
                                                                         "tagName": "path",
                                                                         "attributes": {
                                                                           "class": " c3-shape c3-shape-9 c3-bar c3-bar-9",
-                                                                          "d": "M 735.06,263 L735.06,263 L782.9399999999999,263 L782.9399999999999,263 z",
+                                                                          "d": "M 735.06,260.40625 L735.06,260.40625 L782.9399999999999,260.40625 L782.9399999999999,260.40625 z",
                                                                           "style": "stroke: rgb(255, 255, 255); fill: rgb(255, 255, 255); opacity: 1;"
                                                                         }
                                                                       }
@@ -3224,7 +3224,7 @@ module.exports = {
                                                             "tagName": "g",
                                                             "attributes": {
                                                               "class": "c3-chart-arcs",
-                                                              "transform": "translate(399,126.5)"
+                                                              "transform": "translate(399,125.203125)"
                                                             },
                                                             "childNodes": [
                                                               {
@@ -3287,7 +3287,7 @@ module.exports = {
                                                         "attributes": {
                                                           "class": "c3-axis c3-axis-x",
                                                           "clip-path": "url(http://localhost:3000/#c3-1542123354-clip-xaxis)",
-                                                          "transform": "translate(0,263)",
+                                                          "transform": "translate(0,260.40625)",
                                                           "style": "visibility: visible; opacity: 1;"
                                                         },
                                                         "childNodes": [
@@ -3765,7 +3765,7 @@ module.exports = {
                                                             "tagName": "g",
                                                             "attributes": {
                                                               "class": "tick",
-                                                              "transform": "translate(0,263)",
+                                                              "transform": "translate(0,261)",
                                                               "style": "opacity: 1;"
                                                             },
                                                             "childNodes": [
@@ -3804,7 +3804,7 @@ module.exports = {
                                                             "tagName": "g",
                                                             "attributes": {
                                                               "class": "tick",
-                                                              "transform": "translate(0,240)",
+                                                              "transform": "translate(0,237)",
                                                               "style": "opacity: 1;"
                                                             },
                                                             "childNodes": [
@@ -3843,7 +3843,7 @@ module.exports = {
                                                             "tagName": "g",
                                                             "attributes": {
                                                               "class": "tick",
-                                                              "transform": "translate(0,216)",
+                                                              "transform": "translate(0,214)",
                                                               "style": "opacity: 1;"
                                                             },
                                                             "childNodes": [
@@ -3882,7 +3882,7 @@ module.exports = {
                                                             "tagName": "g",
                                                             "attributes": {
                                                               "class": "tick",
-                                                              "transform": "translate(0,192)",
+                                                              "transform": "translate(0,190)",
                                                               "style": "opacity: 1;"
                                                             },
                                                             "childNodes": [
@@ -3921,7 +3921,7 @@ module.exports = {
                                                             "tagName": "g",
                                                             "attributes": {
                                                               "class": "tick",
-                                                              "transform": "translate(0,168)",
+                                                              "transform": "translate(0,167)",
                                                               "style": "opacity: 1;"
                                                             },
                                                             "childNodes": [
@@ -3960,7 +3960,7 @@ module.exports = {
                                                             "tagName": "g",
                                                             "attributes": {
                                                               "class": "tick",
-                                                              "transform": "translate(0,144)",
+                                                              "transform": "translate(0,143)",
                                                               "style": "opacity: 1;"
                                                             },
                                                             "childNodes": [
@@ -3999,7 +3999,7 @@ module.exports = {
                                                             "tagName": "g",
                                                             "attributes": {
                                                               "class": "tick",
-                                                              "transform": "translate(0,121)",
+                                                              "transform": "translate(0,119)",
                                                               "style": "opacity: 1;"
                                                             },
                                                             "childNodes": [
@@ -4038,7 +4038,7 @@ module.exports = {
                                                             "tagName": "g",
                                                             "attributes": {
                                                               "class": "tick",
-                                                              "transform": "translate(0,97)",
+                                                              "transform": "translate(0,96)",
                                                               "style": "opacity: 1;"
                                                             },
                                                             "childNodes": [
@@ -4077,7 +4077,7 @@ module.exports = {
                                                             "tagName": "g",
                                                             "attributes": {
                                                               "class": "tick",
-                                                              "transform": "translate(0,73)",
+                                                              "transform": "translate(0,72)",
                                                               "style": "opacity: 1;"
                                                             },
                                                             "childNodes": [
@@ -4233,7 +4233,7 @@ module.exports = {
                                                             "tagName": "path",
                                                             "attributes": {
                                                               "class": "domain",
-                                                              "d": "M-6,1H0V263H-6"
+                                                              "d": "M-6,1H0V260.40625H-6"
                                                             }
                                                           }
                                                         ]
@@ -4261,7 +4261,7 @@ module.exports = {
                                                             "tagName": "g",
                                                             "attributes": {
                                                               "class": "tick",
-                                                              "transform": "translate(0,263)",
+                                                              "transform": "translate(0,261)",
                                                               "style": "opacity: 1;"
                                                             },
                                                             "childNodes": [
@@ -4300,7 +4300,7 @@ module.exports = {
                                                             "tagName": "g",
                                                             "attributes": {
                                                               "class": "tick",
-                                                              "transform": "translate(0,237)",
+                                                              "transform": "translate(0,235)",
                                                               "style": "opacity: 1;"
                                                             },
                                                             "childNodes": [
@@ -4339,7 +4339,7 @@ module.exports = {
                                                             "tagName": "g",
                                                             "attributes": {
                                                               "class": "tick",
-                                                              "transform": "translate(0,211)",
+                                                              "transform": "translate(0,209)",
                                                               "style": "opacity: 1;"
                                                             },
                                                             "childNodes": [
@@ -4378,7 +4378,7 @@ module.exports = {
                                                             "tagName": "g",
                                                             "attributes": {
                                                               "class": "tick",
-                                                              "transform": "translate(0,185)",
+                                                              "transform": "translate(0,183)",
                                                               "style": "opacity: 1;"
                                                             },
                                                             "childNodes": [
@@ -4417,7 +4417,7 @@ module.exports = {
                                                             "tagName": "g",
                                                             "attributes": {
                                                               "class": "tick",
-                                                              "transform": "translate(0,159)",
+                                                              "transform": "translate(0,157)",
                                                               "style": "opacity: 1;"
                                                             },
                                                             "childNodes": [
@@ -4456,7 +4456,7 @@ module.exports = {
                                                             "tagName": "g",
                                                             "attributes": {
                                                               "class": "tick",
-                                                              "transform": "translate(0,132)",
+                                                              "transform": "translate(0,131)",
                                                               "style": "opacity: 1;"
                                                             },
                                                             "childNodes": [
@@ -4495,7 +4495,7 @@ module.exports = {
                                                             "tagName": "g",
                                                             "attributes": {
                                                               "class": "tick",
-                                                              "transform": "translate(0,106)",
+                                                              "transform": "translate(0,105)",
                                                               "style": "opacity: 1;"
                                                             },
                                                             "childNodes": [
@@ -4534,7 +4534,7 @@ module.exports = {
                                                             "tagName": "g",
                                                             "attributes": {
                                                               "class": "tick",
-                                                              "transform": "translate(0,80)",
+                                                              "transform": "translate(0,79)",
                                                               "style": "opacity: 1;"
                                                             },
                                                             "childNodes": [
@@ -4573,7 +4573,7 @@ module.exports = {
                                                             "tagName": "g",
                                                             "attributes": {
                                                               "class": "tick",
-                                                              "transform": "translate(0,54)",
+                                                              "transform": "translate(0,53)",
                                                               "style": "opacity: 1;"
                                                             },
                                                             "childNodes": [
@@ -4612,7 +4612,7 @@ module.exports = {
                                                             "tagName": "g",
                                                             "attributes": {
                                                               "class": "tick",
-                                                              "transform": "translate(0,28)",
+                                                              "transform": "translate(0,27)",
                                                               "style": "opacity: 1;"
                                                             },
                                                             "childNodes": [
@@ -4690,7 +4690,7 @@ module.exports = {
                                                             "tagName": "path",
                                                             "attributes": {
                                                               "class": "domain",
-                                                              "d": "M6,1H0V263H6"
+                                                              "d": "M6,1H0V260.40625H6"
                                                             }
                                                           }
                                                         ]
@@ -5244,7 +5244,7 @@ module.exports = {
                                                   {
                                                     "tagName": "g",
                                                     "attributes": {
-                                                      "transform": "translate(0,297)"
+                                                      "transform": "translate(0,294.40625)"
                                                     },
                                                     "childNodes": [
                                                       {
@@ -5275,7 +5275,7 @@ module.exports = {
                                                               "x": "394.7578125",
                                                               "y": "-5",
                                                               "width": "60.484375",
-                                                              "height": "23",
+                                                              "height": "25.59375",
                                                               "style": "fill-opacity: 0;"
                                                             }
                                                           },

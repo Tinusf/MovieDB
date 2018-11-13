@@ -182,20 +182,20 @@ class MovieGrid extends React.Component {
             />
           </div>
           <div className={classes.sortMenu}>
-            <Button className={classes.sortButton} aria-owns={anchorEl ? "sort-menu" : undefined} aria-haspopup="true" onClick={this.handleClick}>
+            <Button className={classes.sortButton + " sortButton"} aria-owns={anchorEl ? "sort-menu" : undefined} aria-haspopup="true" onClick={this.handleClick}>
               Sort By
             </Button>
             <Menu id="sort-menu" anchorEl={anchorEl} open={Boolean(anchorEl)} onClose={this.handleClose}>
-              <MenuItem onClick={() => this.handleClose("adult")}>Adult</MenuItem>
-              <MenuItem onClick={() => this.handleClose("title")}>Alphabetical</MenuItem>
-              <MenuItem onClick={() => this.handleClose("budget")}>Budget</MenuItem>
-              <MenuItem onClick={() => this.handleClose("popularity")}>Popularity</MenuItem>
-              <MenuItem onClick={() => this.handleClose("release_date")}>Release Date</MenuItem>
-              <MenuItem onClick={() => this.handleClose("revenue")}>Revenue</MenuItem>
+              <MenuItem onClick={() => this.handleClose("adult")} className="sortAdult">Adult</MenuItem>
+              <MenuItem onClick={() => this.handleClose("title")} className="sortTitle">Alphabetical</MenuItem>
+              <MenuItem onClick={() => this.handleClose("budget")} className="sortBudget">Budget</MenuItem>
+              <MenuItem onClick={() => this.handleClose("popularity")} className="sortPopularity">Popularity</MenuItem>
+              <MenuItem onClick={() => this.handleClose("release_date")} className="sortDate">Release Date</MenuItem>
+              <MenuItem onClick={() => this.handleClose("revenue")} className="sortRevenue">Revenue</MenuItem>
             </Menu>
           </div>
           <div className={classes.sortIcon} style={{ cursor: "pointer" }}>
-            <SortIcon onClick={() => this.handleChangeSorting(!this.state.asc)} />
+            <SortIcon onClick={() => this.handleChangeSorting(!this.state.asc)} className="sortIcon" />
           </div>
         </Toolbar>
       </AppBar>

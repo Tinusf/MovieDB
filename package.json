@@ -37,7 +37,8 @@
     "build": "react-scripts build",
     "eject": "react-scripts eject",
     "cypress": "cypress open",
-    "test": "cypress open"
+    "test": "cypress open",
+    "remove-snapshots": "rm snapshots.js && touch snapshots.js"
   },
   "eslintConfig": {
     "extends": "react-app"

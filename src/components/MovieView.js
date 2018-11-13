@@ -10,7 +10,7 @@ import StarRate from "@material-ui/icons/StarRate";
 import C3Chart from "react-c3js";
 import CircularProgress from "@material-ui/core/CircularProgress";
 
-import "c3/c3.css";
+// import "c3/c3.css"; DENNE KRÆSJER CYPRESS TESTENE.
 import { format } from "url";
 
 const uuidv1 = require("uuid/v1");
@@ -47,6 +47,7 @@ class MovieView extends React.Component {
   };
 
   castCrewStringToJson = inputString => {
+    console.log(inputString);
     // Beklager veldig stygg hack, men noe av dataen i databasen vår er så rart formatert at vi må gjøre dette.
     // Hadde vi startet på nytt hadde vi brukt lenger tid til å finne finere dataset uten alt dette tullet her.
 
@@ -89,7 +90,7 @@ class MovieView extends React.Component {
       // Dette er mellom "ene. Så tar jeg split og join som gjør at jeg replacer alle ' med ingenting.
       const withoutSingly =
         inputString
-          .substr(doublyIndex + 1, lastDoublyIndex - doublyIndex - howManySingly)
+          .substr(doublyIndex + 1, lastDoublyIndex - doublyIndex - 1)
           .split("'")
           .join("") + "'";
       // Dette er resten av stringen.

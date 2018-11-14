@@ -6,11 +6,9 @@ import { Provider } from "react-redux";
 import { createStore, applyMiddleware } from "redux";
 import MovieSearch from "./components/MovieSearch";
 import MovieGrid from "./components/MovieGrid";
-import promiseMiddleware from 'redux-promise-middleware';
+import promiseMiddleware from "redux-promise-middleware";
 
-const composeStoreWithMiddleware = applyMiddleware(
-  promiseMiddleware(),
-)(createStore);
+const composeStoreWithMiddleware = applyMiddleware(promiseMiddleware())(createStore);
 
 const store = composeStoreWithMiddleware(reducer);
 

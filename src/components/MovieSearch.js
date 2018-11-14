@@ -11,12 +11,12 @@ import SortIcon from "@material-ui/icons/UnfoldMore";
 import { createMuiTheme } from "@material-ui/core/styles";
 import purple from "@material-ui/core/colors/purple";
 import styled from "styled-components";
-import Button from '@material-ui/core/Button';
-import Menu from '@material-ui/core/Menu';
-import MenuItem from '@material-ui/core/MenuItem';
+import Button from "@material-ui/core/Button";
+import Menu from "@material-ui/core/Menu";
+import MenuItem from "@material-ui/core/MenuItem";
 import { connect } from "react-redux";
-import { setSearchSettings } from "../store/actions/MovieActions";
-
+import { setSearchSettings, setView } from "../store/actions/MovieActions";
+import ArrowBack from "@material-ui/icons/ArrowBack";
 /*
 
 Should be a part of the grid display of movies
@@ -39,14 +39,24 @@ const styles = theme => ({
   grow: {
     flexGrow: 1
   },
+  menu: {
+    display: "flex"
+  },
   menuButton: {
     marginLeft: -12,
     marginRight: 20
   },
   title: {
+    width: "250px",
     display: "none",
     [theme.breakpoints.up("sm")]: {
       display: "block"
+    }
+  },
+  backButton: {
+    display: "block",
+    [theme.breakpoints.up("sm")]: {
+      display: "none"
     }
   },
   search: {
@@ -69,9 +79,7 @@ const styles = theme => ({
     height: "100%",
     position: "absolute",
     pointerEvents: "none",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center"
+    marginTop: "4px"
   },
   inputRoot: {
     color: "inherit",
@@ -101,27 +109,25 @@ const styles = theme => ({
     }
   },
   sortMenu: {
-    position: "absolute",
-    right: 50
+    width: "100%",
+    display: "flex",
+    justifyContent: "flex-end"
   },
   sortButton: {
     color: "white"
   },
   sortIcon: {
-    position: "absolute",
-    right: 20,
-    padding: theme.spacing.unit
+    color: "white"
   }
 });
 
-class MovieGrid extends React.Component {
+class MovieSearch extends React.Component {
   state = {
     anchorEl: null,
     searchText: "",
     pagenr: 0,
     asc: false,
-    ordering: "vote_count",
-
+    ordering: "vote_count"
   };
 
   handleClick = event => {
@@ -133,21 +139,21 @@ class MovieGrid extends React.Component {
     this.setState({ ordering: sortBy });
   };
 
-  handleChangeSorting = (ascBool) => {
+  handleChangeSorting = ascBool => {
     this.setState({ asc: ascBool });
   };
 
-  componentDidUpdate() {
+  componentDidUpdate(prevProps, prevState) {
     this.props.dispatch(setSearchSettings(this.state.searchText, this.state.asc, this.state.pagenr, this.state.ordering));
+
+    // Hvis du alt var på movieView siden og så endrer du søkefelt eller sorteringen så vil både forrige props og propsen nå være movieview og vi kan gå tilbake til moviegridden.
+    if (prevProps.viewName === this.props.viewName && this.props.viewName === "movieview") {
+      this.goback();
+    }
   }
 
-  sendInput = (
-    searchText = this.state.searchText,
-    asc = this.state.asc,
-    pagenr = this.state.pagenr,
-    ordering = this.state.ordering,
-  ) => {
-
+  goback = () => {
+    this.props.dispatch(setView("moviegrid"));
   }
 
   componentDidMount() {
@@ -155,15 +161,22 @@ class MovieGrid extends React.Component {
   }
 
   render() {
-    const { classes } = this.props;
+    const { classes, viewName } = this.props;
     const { anchorEl } = this.state;
-
     return (
       <AppBar position="static">
-        <Toolbar>
-          <Typography variant="h6" color="inherit">
-            Movie database
-          </Typography>
+        <Toolbar className={classes.menu} >
+          <Button color="inherit" onClick={e => this.goback()}>
+            <Typography variant="h6" className={classes.title} color="inherit">
+              Movie database
+            </Typography>
+          </Button>
+          {viewName && this.props.viewName !== "moviegrid" && (
+            <Button className={classes.backButton} onClick={e => this.goback()}>
+              <ArrowBack style={{ color: "white" }} />
+            </Button>
+          )}
+
           <div className={classes.search}>
             <div className={classes.searchIcon}>
               <SearchIcon />
@@ -176,7 +189,7 @@ class MovieGrid extends React.Component {
               }}
               className="searchInputField"
               onChange={event => {
-                this.setState({ searchText: event.target.value })
+                this.setState({ searchText: event.target.value });
                 // this.sendInput(searchText => event.target.value);
               }}
             />
@@ -193,9 +206,9 @@ class MovieGrid extends React.Component {
               <MenuItem onClick={() => this.handleClose("release_date")} className="sortDate">Release Date</MenuItem>
               <MenuItem onClick={() => this.handleClose("revenue")} className="sortRevenue">Revenue</MenuItem>
             </Menu>
-          </div>
-          <div className={classes.sortIcon} style={{ cursor: "pointer" }}>
-            <SortIcon onClick={() => this.handleChangeSorting(!this.state.asc)} className="sortIcon" />
+            <Button className={classes.sortIcon + " sortIcon"} onClick={() => this.handleChangeSorting(!this.state.asc)}>
+              <SortIcon />
+            </Button>
           </div>
         </Toolbar>
       </AppBar>
@@ -203,4 +216,4 @@ class MovieGrid extends React.Component {
   }
 }
 
-export default connect()(withStyles(styles)(MovieGrid));
+export default connect(state => ({ viewName: state.movies.viewName }))(withStyles(styles)(MovieSearch));

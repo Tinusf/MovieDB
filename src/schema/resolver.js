@@ -1,7 +1,7 @@
 import db from '../database/index';
 
 // Hvor mange resultater som skal bli vist på en gang.
-const resultsPerPage = 10;
+const resultsPerPage = 35;
 
 //GraphQL Query Resolvers//
 

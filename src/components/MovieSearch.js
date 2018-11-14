@@ -15,9 +15,8 @@ import Button from "@material-ui/core/Button";
 import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
 import { connect } from "react-redux";
-import { setSearchSettings } from "../store/actions/MovieActions";
+import { setSearchSettings, setView } from "../store/actions/MovieActions";
 import ArrowBack from "@material-ui/icons/ArrowBack";
-
 /*
 
 Should be a part of the grid display of movies
@@ -144,11 +143,18 @@ class MovieSearch extends React.Component {
     this.setState({ asc: ascBool });
   };
 
-  componentDidUpdate() {
+  componentDidUpdate(prevProps, prevState) {
     this.props.dispatch(setSearchSettings(this.state.searchText, this.state.asc, this.state.pagenr, this.state.ordering));
+
+    // Hvis du alt var på movieView siden og så endrer du søkefelt eller sorteringen så vil både forrige props og propsen nå være movieview og vi kan gå tilbake til moviegridden.
+    if (prevProps.viewName === this.props.viewName && this.props.viewName === "movieview") {
+      this.goback();
+    }
   }
 
-  sendInput = (searchText = this.state.searchText, asc = this.state.asc, pagenr = this.state.pagenr, ordering = this.state.ordering) => {};
+  goback = () => {
+    this.props.dispatch(setView("moviegrid"));
+  }
 
   componentDidMount() {
     this.props.dispatch(setSearchSettings("", false, 0, "vote_count"));
@@ -159,12 +165,14 @@ class MovieSearch extends React.Component {
     const { anchorEl } = this.state;
     return (
       <AppBar position="static">
-        <Toolbar className={classes.menu}>
-          <Typography variant="h6" className={classes.title} color="inherit">
-            Movie database
-          </Typography>
+        <Toolbar className={classes.menu} >
+          <Button color="inherit" onClick={e => this.goback()}>
+            <Typography variant="h6" className={classes.title} color="inherit">
+              Movie database
+            </Typography>
+          </Button>
           {viewName && this.props.viewName !== "moviegrid" && (
-            <Button className={classes.backButton}>
+            <Button className={classes.backButton} onClick={e => this.goback()}>
               <ArrowBack style={{ color: "white" }} />
             </Button>
           )}
@@ -195,8 +203,8 @@ class MovieSearch extends React.Component {
               <MenuItem onClick={() => this.handleClose("release_date")}>Release Date</MenuItem>
               <MenuItem onClick={() => this.handleClose("budget")}>Budget</MenuItem>
             </Menu>
-            <Button className={classes.sortIcon}>
-              <SortIcon onClick={() => this.handleChangeSorting(!this.state.asc)} />
+            <Button className={classes.sortIcon} onClick={() => this.handleChangeSorting(!this.state.asc)}>
+              <SortIcon />
             </Button>
           </div>
         </Toolbar>

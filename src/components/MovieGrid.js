@@ -46,14 +46,13 @@ class MovieGrid extends React.Component {
       // For å få alle fint til venstre så må vi legge til noen ghost items.
       movieItems.push(Array.from(new Array(10), (item, index) => <MovieGridItem ghost={true} url={"./noposter.png"} key={index + 1000} />));
     }
-
     return (
       <div>
-        {this.state.chosenMovieId && <MovieView movieId={this.state.chosenMovieId} />}
-        {!this.state.chosenMovieId && <Grid>{movieItems}</Grid>}
+        {this.props.viewName && this.props.viewName === "movieview" && <MovieView movieId={this.state.chosenMovieId} />}
+        {this.props.viewName && this.props.viewName === "moviegrid" && <Grid>{movieItems}</Grid>}
       </div>
     );
   }
 }
 
-export default connect(state => ({ moviesData: state.movies.movies }))(MovieGrid);
+export default connect(state => ({ moviesData: state.movies.movies, viewName: state.movies.viewName }))(MovieGrid);

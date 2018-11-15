@@ -46,6 +46,7 @@ class MovieRating extends React.Component {
         onMouseEnter={() => this.updateRating(i)}
         onClick={() => this.setFinal(i)}
         style={{ fontSize: 30, cursor: "pointer", color: this.state.rating >= i ? "#ff9800" : "gray" }}
+        className={"starRating" + (i + 1)}
       />
     ));
     const RateBox = styled.div`
@@ -57,7 +58,7 @@ class MovieRating extends React.Component {
     return (
       <RateBox onMouseLeave={() => this.updateRating(-1)}>
         <div>{stars}</div>
-        <Button style={{ marginRight: 10 }} variant="contained" color="primary" onClick={this.submitRating}>
+        <Button style={{ marginRight: 10 }} variant="contained" color="primary" onClick={this.submitRating} className="ratingButton">
           Rate this movie
         </Button>
       </RateBox>

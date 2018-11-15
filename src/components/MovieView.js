@@ -1,5 +1,5 @@
 import React from "react";
-import { runGraphQLQuery } from "../utils/Utils";
+import { runGraphQLQuery, castCrewStringToJson } from "../utils/Utils";
 
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
@@ -9,6 +9,7 @@ import MovieRating from "./MovieRating";
 import StarRate from "@material-ui/icons/StarRate";
 import C3Chart from "react-c3js";
 import CircularProgress from "@material-ui/core/CircularProgress";
+import { connect } from "react-redux";
 
 import "c3/c3.css";
 import { format } from "url";
@@ -45,70 +46,6 @@ class MovieView extends React.Component {
     runGraphQLQuery(query, { movieId }).then(data => {
       this.setState({ movieMetaData: data.movie });
     });
-  };
-
-  castCrewStringToJson = inputString => {
-    // Beklager veldig stygg hack, men noe av dataen i databasen vår er så rart formatert at vi må gjøre dette.
-    // Hadde vi startet på nytt hadde vi brukt lenger tid til å finne finere dataset uten alt dette tullet her.
-
-    // Pga dataen var på rart format i SQL databasen vår må vi håndtere det her.
-    // Bytter ut ' med " og bytter ut None med null etc etc.
-    // Fikk også problemer med at data var slik i databasen:
-    // 'name': "Kelly O'Connell"
-    // Dette skaper problemer når jeg replacer alle.
-    // for å fikse:
-    // 'name': "Kelly O'Connell"
-    // finn index til første " og gå gjennom helt du finner index til ' og så fjerne ' tegnet.
-
-    // De bruker bare " i databasen om det er navn som inneholder '.
-    let doublyIndex = inputString.indexOf('"');
-    // while istedenfor if i tilfelle det er flere tilfeller av dette i samme string.
-    while (doublyIndex >= 0) {
-      let index = doublyIndex + 1;
-      let howManySingly = 0;
-      let lastDoublyIndex = 0;
-      while (true) {
-        if (inputString[index] === "'") {
-          howManySingly++;
-        } else if (inputString[index] === '"') {
-          lastDoublyIndex = index;
-          break;
-        }
-        index++;
-      }
-      if (howManySingly === 0) {
-        // Da er det navn som 'Florencia "Flo" Fuentes' og da kan vi bare fjerne de to første "ene.
-        inputString = inputString.replace('"', "");
-        inputString = inputString.replace('"', "");
-
-        doublyIndex = inputString.indexOf('"');
-        continue;
-      }
-      // Strings er immutable... så det blir litt stygg kode her.
-      // Dette er delen av stringen før første "
-      const start = inputString.substr(0, doublyIndex) + "'";
-      // Dette er mellom "ene. Så tar jeg split og join som gjør at jeg replacer alle ' med ingenting.
-      const withoutSingly =
-        inputString
-          .substr(doublyIndex + 1, lastDoublyIndex - doublyIndex - howManySingly)
-          .split("'")
-          .join("") + "'";
-      // Dette er resten av stringen.
-      const end = inputString.substr(lastDoublyIndex + 1);
-      // Setter tilbake til inputString
-      inputString = start + withoutSingly + end;
-      // Sjekker om det er flere jeg må gjøre dette med.
-      doublyIndex = inputString.indexOf('"');
-    }
-
-    // split og join blir som replaceAll.
-    const formattedCast = inputString
-      .split("'")
-      .join('"')
-      .split("None")
-      .join("null");
-    // Vi velger bare de 3 første (om de ikke har 3 blir det så mange som de har).
-    return JSON.parse(formattedCast).slice(0, 3);
   };
 
   calculateAverageRating = () => {
@@ -186,8 +123,8 @@ class MovieView extends React.Component {
       }
     }`;
     runGraphQLQuery(query, { movieId }).then(data => {
-      const cast = this.castCrewStringToJson(data.credits.cast);
-      const crew = this.castCrewStringToJson(data.credits.crew);
+      const cast = castCrewStringToJson(data.credits.cast);
+      const crew = castCrewStringToJson(data.credits.crew);
       this.setState({ movieCast: cast });
       this.setState({ movieCrew: crew });
     });
@@ -202,20 +139,31 @@ class MovieView extends React.Component {
     const Container = styled.div`
       background-size: cover;
       background-size: cover;
-      background-position: bottom;
+      background-position: center;
+      height: 100%;
     `;
 
     const MoviePoster = styled.img`
-      height: 500px;
+      max-width: 100%;
+      max-height: 500px;
       margin: 30px;
+      width: 300px;
       margin-left: 0px;
       border-radius: 4px;
       box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12);
     `;
 
+    const LeftSection = styled.div`
+      max-width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-content: flex-start;
+    `;
+
     const MovieContainer = styled.div`
       background: radial-gradient(circle at 20% 50%, rgba(77, 50, 77, 0.85) 0%, rgba(49, 70, 81, 0.68) 100%);
-      height: 100vh;
+      height: 100%;
+      min-height: 100vh
       padding-top: 70px;
     `;
 
@@ -224,10 +172,13 @@ class MovieView extends React.Component {
       padding-top: 50px;
       width: 80%;
       display: flex;
+      justify-content: center
+      flex-wrap: wrap;
     `;
     const MovieDetails = styled.div`
       margin: 30px;
       color: white;
+      max-width: 90%;
     `;
     const Row = styled.div`
       display: flex;
@@ -240,6 +191,7 @@ class MovieView extends React.Component {
       color: "white",
       textAlign: "left"
     };
+
     let crewRow;
     if (this.state.movieCrew) {
       crewRow = this.state.movieCrew.map((crew, index) => {
@@ -282,11 +234,12 @@ class MovieView extends React.Component {
         <MovieContainer>
           {this.state.movieMetaData && (
             <MovieInfo>
-              <div>
+              <LeftSection className="leftSection">
                 <MoviePoster src={"https://image.tmdb.org/t/p/w1280/" + this.state.movieMetaData.poster_path} />
                 <Section>
                   <Row>
                     <Button
+                      className="imdbButton"
                       style={{ marginRight: 10 }}
                       variant="contained"
                       color="primary"
@@ -295,6 +248,7 @@ class MovieView extends React.Component {
                       IMDB link
                     </Button>
                     <Button
+                      className="tmbdButton"
                       style={{ marginRight: 10 }}
                       variant="contained"
                       color="primary"
@@ -307,7 +261,7 @@ class MovieView extends React.Component {
                 {this.state.graphData && (
                   <Section>
                     <Row style={{ alignItems: "flex-end" }}>
-                      <StarRate style={{ fontSize: 65, color: "white" }} />
+                      <StarRate style={{ fontSize: 65, color: this.state.myRating ? "#ff9800" : "white" }} />
                       <Typography style={{ ...fontStyle, fontSize: 30 }} variant="subtitle2" gutterBottom>
                         {this.calculateAverageRating()}
                       </Typography>
@@ -317,7 +271,7 @@ class MovieView extends React.Component {
                     </Row>
                     {this.state.myRating && (
                       <Row>
-                        <Typography style={{ ...fontStyle, fontSize: 30 }} variant="subtitle2" gutterBottom>
+                        <Typography style={{ ...fontStyle, fontSize: 30 }} variant="subtitle2" gutterBottom className="myRating">
                           {"Your rating " + this.state.myRating}
                         </Typography>
                         <Typography style={{ ...fontStyle, fontSize: 15, position: "relative", bottom: "-16px" }} variant="subtitle2" gutterBottom>
@@ -334,11 +288,11 @@ class MovieView extends React.Component {
                     )}
                   </Section>
                 )}
-              </div>
+              </LeftSection>
 
               <MovieDetails>
                 <Section>
-                  <Typography style={{ ...fontStyle }} variant="h4" color="white" gutterBottom>
+                  <Typography style={{ ...fontStyle }} variant="h4" color="white" gutterBottom className="title">
                     {this.state.movieMetaData.title}
                     <Typography style={{ ...fontStyle }} variant="h5" gutterBottom>
                       {this.state.movieMetaData.release_date}
@@ -349,7 +303,7 @@ class MovieView extends React.Component {
                   <Typography style={{ ...fontStyle }} variant="h6" gutterBottom>
                     Overview
                   </Typography>
-                  <Typography style={{ ...fontStyle }} variant="body1" gutterBottom>
+                  <Typography style={{ ...fontStyle, width: "700px", maxWidth: "100%" }} variant="body1" gutterBottom className="overView">
                     {this.state.movieMetaData.overview}
                   </Typography>
                 </Section>
@@ -371,14 +325,14 @@ class MovieView extends React.Component {
                 )}
                 <Section>
                   <Row style={{ color: "black" }}>
-                    {this.state.graphData && <C3Chart data={this.state.graphData} />}
+                    {this.state.graphData && <C3Chart data={this.state.graphData} style={{ maxWidth: "100%", margin: "0px", padding: "0px" }} />}
                     {!this.state.graphData && <CircularProgress style={{ color: "white" }} />}
                   </Row>
                 </Section>
               </MovieDetails>
             </MovieInfo>
           )}
-          {!this.state.movieMetaData && <p>LOADING</p>}
+          {!this.state.movieMetaData && <CircularProgress style={{ color: "white" }} />}
         </MovieContainer>
       </Container>
     );
@@ -409,4 +363,4 @@ class MovieView extends React.Component {
   }
 }
 
-export default MovieView;
+export default connect(state => ({ viewName: state.movies.viewName }))(MovieView);

@@ -1,20 +1,30 @@
 import { combineReducers } from "redux";
-import { SEARCH_MOVIES, SET_SEARCH_SETTINGS, SET_VIEW } from "../actions/MovieActions";
+import { SEARCH_MOVIES, SET_SEARCH_SETTINGS, SET_VIEW, LOAD_NEXT_PAGE } from "../actions/MovieActions";
 
-let movies = (state = { searchText: "", asc: true, movies: [], viewName: "moviegrid" }, action) => {
+let movies = (
+  state = { searchText: "", pagenr: 0, asc: false, ordering: "vote_count", movies: [], viewName: "moviegrid", moreToLoad: true },
+  action
+) => {
   // oppdater hvilke filmer som skal vises
   // state = Object.assign({}, state, {
   //   movies: action.movies
   // })
 
   switch (action.type) {
-    case SET_SEARCH_SETTINGS + "_FULFILLED":
+    case SET_SEARCH_SETTINGS:
       return Object.assign({}, state, {
-        movies: action.payload.movies,
-        searchText: action.payload.searchText,
-        asc: action.payload.asc,
-        pagenr: action.payload.pagenr,
-        ordering: action.payload.ordering
+        movies: [],
+        searchText: action.searchText,
+        asc: action.asc,
+        pagenr: 0,
+        ordering: action.ordering,
+        moreToLoad: true
+      });
+    case LOAD_NEXT_PAGE + "_FULFILLED":
+      return Object.assign({}, state, {
+        moreToLoad: action.payload.movies.length > 0,
+        movies: state.movies.concat(action.payload.movies),
+        pagenr: action.payload.pagenr + 1
       });
     case SEARCH_MOVIES:
       return Object.assign({}, state, {

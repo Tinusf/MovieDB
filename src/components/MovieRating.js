@@ -34,8 +34,9 @@ class MovieRating extends React.Component {
         count
       }
     }`;
-    runGraphQLQuery(query, { movieId: this.props.movieId, userId: this.props.userId, rating: (this.state.rating + 1) / 2 });
-    this.props.ratingHasUpdated();
+    runGraphQLQuery(query, { movieId: this.props.movieId, userId: this.props.userId, rating: (this.state.rating + 1) / 2 }).then(() => {
+      this.props.ratingHasUpdated();
+    });
   };
 
   render() {

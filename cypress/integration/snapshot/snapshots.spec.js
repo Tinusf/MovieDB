@@ -1,4 +1,4 @@
-const waitTime = 4000
+const waitTime = 6000
 
 describe('snapshot testing', () => {
   beforeEach(() => {
@@ -23,6 +23,7 @@ describe('snapshot testing', () => {
 
   it('Search results and MovieView Snapshot', () => {
     // Denne testen vil faile om noen andre har rated denne filmen, så helst ikke gjør det.
+    // Også veldig viktig at du ikke klikker på noe mens testene kjører og ikke fokuser på et annet vindu.
 
     cy.get('.searchInputField').children()
       .type("María (y los demás)")

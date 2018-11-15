@@ -267,7 +267,7 @@ class MovieView extends React.Component {
                     </Row>
                     {this.state.myRating && (
                       <Row>
-                        <Typography style={{ ...fontStyle, fontSize: 30 }} variant="subtitle2" gutterBottom>
+                        <Typography style={{ ...fontStyle, fontSize: 30 }} variant="subtitle2" gutterBottom className="myRating">
                           {"Your rating " + this.state.myRating}
                         </Typography>
                         <Typography style={{ ...fontStyle, fontSize: 15, position: "relative", bottom: "-16px" }} variant="subtitle2" gutterBottom>

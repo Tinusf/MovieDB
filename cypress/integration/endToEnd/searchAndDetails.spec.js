@@ -6,6 +6,7 @@ const waitTime = 2000;
 describe('Regular working search and MovieView.', () => {
   beforeEach(() => {
     cy.visit('http://localhost:3000/')
+      .wait(waitTime);
   });
 
   // Denne testen søker vi ette Toy Story
@@ -42,7 +43,7 @@ describe('Regular working search and MovieView.', () => {
 
   // Denne testen søker vi etter Harry potter
   // Alt blir testet på samme måte som forrige test
-  it('Search for Toy Story and click it.', () => {
+  it('Search for Harry Potter and click it.', () => {
     const keyword = 'Harry Potter'
     cy.get('.searchInputField').children()
       .type(keyword)

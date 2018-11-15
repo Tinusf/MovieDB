@@ -5,6 +5,7 @@ const waitTime = 4000;
 describe('Regular sorting.', () => {
   beforeEach(() => {
     cy.visit('http://localhost:3000/')
+      .wait(waitTime);
   });
   // Først sorterer vi alfabetisk på tittel
   it('Sort by title', () => {

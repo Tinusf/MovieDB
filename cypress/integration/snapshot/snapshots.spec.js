@@ -5,7 +5,13 @@ describe('snapshot testing', () => {
     // hard-coder tiden til å være 13. nov 16:37 slik at klassenavnene blir like og snapshotsene funker uansett når du kjører de.
     cy.clock(1542123354);
     cy.visit('http://localhost:3000/')
-      .wait(waitTime)
+      .wait(waitTime);
+
+    // Siden c3js bruker random funksjon for å lage klassenavn må vi mocke random for at vi alltid skal få samme klassenavn i snapshotet.
+    const mockMath = Object.create(global.Math);
+    mockMath.random = () => 0.5;
+    global.Math = mockMath;
+
   });
 
   it('MovieGrid AKA root Snapshot', () => {

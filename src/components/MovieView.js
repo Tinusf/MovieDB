@@ -11,7 +11,7 @@ import C3Chart from "react-c3js";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import { connect } from "react-redux";
 
-// import "c3/c3.css"; DENNE KRÆSJER CYPRESS TESTENE.
+import "c3/c3.css";
 import { format } from "url";
 
 const uuidv1 = require("uuid/v1");

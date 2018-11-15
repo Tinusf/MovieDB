@@ -2205,45 +2205,45 @@ module.exports = {
                   {
                     "tagName": "div",
                     "attributes": {
-                      "class": "sc-bXVTRF gegmTp",
+                      "class": "sc-gcpVEs ktYFBK",
                       "style": "background-image: url(\"https://image.tmdb.org/t/p/w1280//6I7aPKJbtvMrtlPrzmgwQbnspCN.jpg\");"
                     },
                     "childNodes": [
                       {
                         "tagName": "div",
                         "attributes": {
-                          "class": "sc-gOhbcK jnWIqv"
+                          "class": "sc-eylKsO fXVZoO"
                         },
                         "childNodes": [
                           {
                             "tagName": "div",
                             "attributes": {
-                              "class": "sc-fMvjmP grszcs"
+                              "class": "sc-lccPpP bQhWFA"
                             },
                             "childNodes": [
                               {
                                 "tagName": "div",
                                 "attributes": {
-                                  "class": "sc-lccPpP iOXTXy"
+                                  "class": "sc-bXVTRF eejSFS"
                                 },
                                 "childNodes": [
                                   {
                                     "tagName": "img",
                                     "attributes": {
                                       "src": "https://image.tmdb.org/t/p/w1280//6I7aPKJbtvMrtlPrzmgwQbnspCN.jpg",
-                                      "class": "sc-eylKsO fEqmLY"
+                                      "class": "sc-igaqVs coFOxY"
                                     }
                                   },
                                   {
                                     "tagName": "div",
                                     "attributes": {
-                                      "class": "sc-eLpfTy iBPVIR"
+                                      "class": "sc-bEeSwp dwWTLT"
                                     },
                                     "childNodes": [
                                       {
                                         "tagName": "div",
                                         "attributes": {
-                                          "class": "sc-GLkNx kIaDZZ"
+                                          "class": "sc-fMvjmP hKuBrw"
                                         },
                                         "childNodes": [
                                           {
@@ -2311,13 +2311,13 @@ module.exports = {
                                   {
                                     "tagName": "div",
                                     "attributes": {
-                                      "class": "sc-eLpfTy iBPVIR"
+                                      "class": "sc-bEeSwp dwWTLT"
                                     },
                                     "childNodes": [
                                       {
                                         "tagName": "div",
                                         "attributes": {
-                                          "class": "sc-GLkNx kIaDZZ",
+                                          "class": "sc-fMvjmP hKuBrw",
                                           "style": "align-items: flex-end;"
                                         },
                                         "childNodes": [
@@ -2380,13 +2380,13 @@ module.exports = {
                                       {
                                         "tagName": "div",
                                         "attributes": {
-                                          "class": "sc-GLkNx kIaDZZ"
+                                          "class": "sc-fMvjmP hKuBrw"
                                         },
                                         "childNodes": [
                                           {
                                             "tagName": "div",
                                             "attributes": {
-                                              "class": "sc-dJyloi bLKlAR"
+                                              "class": "sc-GLkNx huCeAi"
                                             },
                                             "childNodes": [
                                               {
@@ -2708,7 +2708,7 @@ module.exports = {
                                           {
                                             "tagName": "div",
                                             "attributes": {
-                                              "class": "sc-GLkNx kIaDZZ"
+                                              "class": "sc-fMvjmP hKuBrw"
                                             }
                                           }
                                         ]
@@ -2720,13 +2720,13 @@ module.exports = {
                               {
                                 "tagName": "div",
                                 "attributes": {
-                                  "class": "sc-bEeSwp bWCMAN"
+                                  "class": "sc-gOhbcK hzARsK"
                                 },
                                 "childNodes": [
                                   {
                                     "tagName": "div",
                                     "attributes": {
-                                      "class": "sc-eLpfTy iBPVIR"
+                                      "class": "sc-bEeSwp dwWTLT"
                                     },
                                     "childNodes": [
                                       {
@@ -2760,7 +2760,7 @@ module.exports = {
                                   {
                                     "tagName": "div",
                                     "attributes": {
-                                      "class": "sc-eLpfTy iBPVIR"
+                                      "class": "sc-bEeSwp dwWTLT"
                                     },
                                     "childNodes": [
                                       {
@@ -2794,7 +2794,7 @@ module.exports = {
                                   {
                                     "tagName": "div",
                                     "attributes": {
-                                      "class": "sc-eLpfTy iBPVIR"
+                                      "class": "sc-bEeSwp dwWTLT"
                                     },
                                     "childNodes": [
                                       {
@@ -2813,7 +2813,7 @@ module.exports = {
                                       {
                                         "tagName": "div",
                                         "attributes": {
-                                          "class": "sc-GLkNx kIaDZZ"
+                                          "class": "sc-fMvjmP hKuBrw"
                                         },
                                         "childNodes": [
                                           {
@@ -2857,7 +2857,7 @@ module.exports = {
                                   {
                                     "tagName": "div",
                                     "attributes": {
-                                      "class": "sc-eLpfTy iBPVIR"
+                                      "class": "sc-bEeSwp dwWTLT"
                                     },
                                     "childNodes": [
                                       {
@@ -2876,7 +2876,7 @@ module.exports = {
                                       {
                                         "tagName": "div",
                                         "attributes": {
-                                          "class": "sc-GLkNx kIaDZZ"
+                                          "class": "sc-fMvjmP hKuBrw"
                                         },
                                         "childNodes": [
                                           {
@@ -2976,13 +2976,13 @@ module.exports = {
                                   {
                                     "tagName": "div",
                                     "attributes": {
-                                      "class": "sc-eLpfTy iBPVIR"
+                                      "class": "sc-bEeSwp dwWTLT"
                                     },
                                     "childNodes": [
                                       {
                                         "tagName": "div",
                                         "attributes": {
-                                          "class": "sc-GLkNx kIaDZZ",
+                                          "class": "sc-fMvjmP hKuBrw",
                                           "style": "color: black;"
                                         },
                                         "childNodes": [
@@ -3013,8 +3013,8 @@ module.exports = {
                                                           {
                                                             "tagName": "rect",
                                                             "attributes": {
-                                                              "width": "657.1875",
-                                                              "height": "263"
+                                                              "width": "667.1875",
+                                                              "height": "266"
                                                             }
                                                           }
                                                         ]
@@ -3028,10 +3028,10 @@ module.exports = {
                                                           {
                                                             "tagName": "rect",
                                                             "attributes": {
-                                                              "x": "-51",
+                                                              "x": "-41",
                                                               "y": "-20",
                                                               "width": "739.1875",
-                                                              "height": "73"
+                                                              "height": "70"
                                                             }
                                                           }
                                                         ]
@@ -3045,10 +3045,10 @@ module.exports = {
                                                           {
                                                             "tagName": "rect",
                                                             "attributes": {
-                                                              "x": "-49",
+                                                              "x": "-39",
                                                               "y": "-4",
-                                                              "width": "70",
-                                                              "height": "287"
+                                                              "width": "60",
+                                                              "height": "290"
                                                             }
                                                           }
                                                         ]
@@ -3062,8 +3062,8 @@ module.exports = {
                                                           {
                                                             "tagName": "rect",
                                                             "attributes": {
-                                                              "width": "657.1875",
-                                                              "height": "263"
+                                                              "width": "667.1875",
+                                                              "height": "266"
                                                             }
                                                           }
                                                         ]
@@ -3077,7 +3077,7 @@ module.exports = {
                                                           {
                                                             "tagName": "rect",
                                                             "attributes": {
-                                                              "width": "657.1875"
+                                                              "width": "667.1875"
                                                             }
                                                           }
                                                         ]
@@ -3087,7 +3087,7 @@ module.exports = {
                                                   {
                                                     "tagName": "g",
                                                     "attributes": {
-                                                      "transform": "translate(50.5,4.5)"
+                                                      "transform": "translate(40.5,4.5)"
                                                     },
                                                     "childNodes": [
                                                       {
@@ -3096,16 +3096,16 @@ module.exports = {
                                                           "class": "c3-text c3-empty",
                                                           "text-anchor": "middle",
                                                           "dominant-baseline": "middle",
-                                                          "x": "328.59375",
-                                                          "y": "131.5"
+                                                          "x": "333.59375",
+                                                          "y": "133"
                                                         }
                                                       },
                                                       {
                                                         "tagName": "rect",
                                                         "attributes": {
                                                           "class": "c3-zoom-rect",
-                                                          "width": "657.1875",
-                                                          "height": "263",
+                                                          "width": "667.1875",
+                                                          "height": "266",
                                                           "style": "opacity: 0;"
                                                         }
                                                       },
@@ -3138,7 +3138,7 @@ module.exports = {
                                                                   "x1": "-10",
                                                                   "x2": "-10",
                                                                   "y1": "0",
-                                                                  "y2": "263",
+                                                                  "y2": "266",
                                                                   "style": "visibility: hidden;"
                                                                 }
                                                               }
@@ -3164,100 +3164,100 @@ module.exports = {
                                                                 "tagName": "rect",
                                                                 "attributes": {
                                                                   "class": " c3-event-rect c3-event-rect-0",
-                                                                  "x": "16.5",
+                                                                  "x": "17",
                                                                   "y": "0",
-                                                                  "width": "49.5",
-                                                                  "height": "263"
+                                                                  "width": "50.5",
+                                                                  "height": "266"
                                                                 }
                                                               },
                                                               {
                                                                 "tagName": "rect",
                                                                 "attributes": {
                                                                   "class": " c3-event-rect c3-event-rect-1",
-                                                                  "x": "66",
+                                                                  "x": "67.5",
                                                                   "y": "0",
-                                                                  "width": "66",
-                                                                  "height": "263"
+                                                                  "width": "66.5",
+                                                                  "height": "266"
                                                                 }
                                                               },
                                                               {
                                                                 "tagName": "rect",
                                                                 "attributes": {
                                                                   "class": " c3-event-rect c3-event-rect-2",
-                                                                  "x": "132",
+                                                                  "x": "134",
                                                                   "y": "0",
-                                                                  "width": "66",
-                                                                  "height": "263"
+                                                                  "width": "66.5",
+                                                                  "height": "266"
                                                                 }
                                                               },
                                                               {
                                                                 "tagName": "rect",
                                                                 "attributes": {
                                                                   "class": " c3-event-rect c3-event-rect-3",
-                                                                  "x": "198",
+                                                                  "x": "200.5",
                                                                   "y": "0",
-                                                                  "width": "65.5",
-                                                                  "height": "263"
+                                                                  "width": "67",
+                                                                  "height": "266"
                                                                 }
                                                               },
                                                               {
                                                                 "tagName": "rect",
                                                                 "attributes": {
                                                                   "class": " c3-event-rect c3-event-rect-4",
-                                                                  "x": "263.5",
+                                                                  "x": "267.5",
                                                                   "y": "0",
-                                                                  "width": "65.5",
-                                                                  "height": "263"
+                                                                  "width": "66.5",
+                                                                  "height": "266"
                                                                 }
                                                               },
                                                               {
                                                                 "tagName": "rect",
                                                                 "attributes": {
                                                                   "class": " c3-event-rect c3-event-rect-5",
-                                                                  "x": "329",
+                                                                  "x": "334",
                                                                   "y": "0",
-                                                                  "width": "66",
-                                                                  "height": "263"
+                                                                  "width": "66.5",
+                                                                  "height": "266"
                                                                 }
                                                               },
                                                               {
                                                                 "tagName": "rect",
                                                                 "attributes": {
                                                                   "class": " c3-event-rect c3-event-rect-6",
-                                                                  "x": "395",
+                                                                  "x": "400.5",
                                                                   "y": "0",
-                                                                  "width": "65.5",
-                                                                  "height": "263"
+                                                                  "width": "67",
+                                                                  "height": "266"
                                                                 }
                                                               },
                                                               {
                                                                 "tagName": "rect",
                                                                 "attributes": {
                                                                   "class": " c3-event-rect c3-event-rect-7",
-                                                                  "x": "460.5",
+                                                                  "x": "467.5",
                                                                   "y": "0",
-                                                                  "width": "65.5",
-                                                                  "height": "263"
+                                                                  "width": "67",
+                                                                  "height": "266"
                                                                 }
                                                               },
                                                               {
                                                                 "tagName": "rect",
                                                                 "attributes": {
                                                                   "class": " c3-event-rect c3-event-rect-8",
-                                                                  "x": "526",
+                                                                  "x": "534.5",
                                                                   "y": "0",
-                                                                  "width": "66",
-                                                                  "height": "263"
+                                                                  "width": "66.5",
+                                                                  "height": "266"
                                                                 }
                                                               },
                                                               {
                                                                 "tagName": "rect",
                                                                 "attributes": {
                                                                   "class": " c3-event-rect c3-event-rect-9",
-                                                                  "x": "592",
+                                                                  "x": "601",
                                                                   "y": "0",
-                                                                  "width": "49.5",
-                                                                  "height": "263"
+                                                                  "width": "50",
+                                                                  "height": "266"
                                                                 }
                                                               }
                                                             ]
@@ -3286,7 +3286,7 @@ module.exports = {
                                                                         "tagName": "path",
                                                                         "attributes": {
                                                                           "class": " c3-shape c3-shape-0 c3-bar c3-bar-0",
-                                                                          "d": "M 13.284375,263 L13.284375,263 L52.715625,263 L52.715625,263 z",
+                                                                          "d": "M 13.984375,266 L13.984375,266 L54.015625,266 L54.015625,266 z",
                                                                           "style": "stroke: rgb(255, 255, 255); fill: rgb(255, 255, 255); opacity: 1;"
                                                                         }
                                                                       },
@@ -3294,7 +3294,7 @@ module.exports = {
                                                                         "tagName": "path",
                                                                         "attributes": {
                                                                           "class": " c3-shape c3-shape-1 c3-bar c3-bar-1",
-                                                                          "d": "M 79.284375,263 L79.284375,263 L118.71562499999999,263 L118.71562499999999,263 z",
+                                                                          "d": "M 80.984375,266 L80.984375,266 L121.015625,266 L121.015625,266 z",
                                                                           "style": "stroke: rgb(255, 255, 255); fill: rgb(255, 255, 255); opacity: 1;"
                                                                         }
                                                                       },
@@ -3302,7 +3302,7 @@ module.exports = {
                                                                         "tagName": "path",
                                                                         "attributes": {
                                                                           "class": " c3-shape c3-shape-2 c3-bar c3-bar-2",
-                                                                          "d": "M 145.284375,263 L145.284375,263 L184.71562500000002,263 L184.71562500000002,263 z",
+                                                                          "d": "M 146.984375,266 L146.984375,266 L187.015625,266 L187.015625,266 z",
                                                                           "style": "stroke: rgb(255, 255, 255); fill: rgb(255, 255, 255); opacity: 1;"
                                                                         }
                                                                       },
@@ -3310,7 +3310,7 @@ module.exports = {
                                                                         "tagName": "path",
                                                                         "attributes": {
                                                                           "class": " c3-shape c3-shape-3 c3-bar c3-bar-3",
-                                                                          "d": "M 211.284375,263 L211.284375,263 L250.71562500000002,263 L250.71562500000002,263 z",
+                                                                          "d": "M 213.984375,266 L213.984375,266 L254.015625,266 L254.015625,266 z",
                                                                           "style": "stroke: rgb(255, 255, 255); fill: rgb(255, 255, 255); opacity: 1;"
                                                                         }
                                                                       },
@@ -3318,7 +3318,7 @@ module.exports = {
                                                                         "tagName": "path",
                                                                         "attributes": {
                                                                           "class": " c3-shape c3-shape-4 c3-bar c3-bar-4",
-                                                                          "d": "M 276.284375,263 L276.284375,263 L315.715625,263 L315.715625,263 z",
+                                                                          "d": "M 280.984375,266 L280.984375,266 L321.015625,266 L321.015625,266 z",
                                                                           "style": "stroke: rgb(255, 255, 255); fill: rgb(255, 255, 255); opacity: 1;"
                                                                         }
                                                                       },
@@ -3326,7 +3326,7 @@ module.exports = {
                                                                         "tagName": "path",
                                                                         "attributes": {
                                                                           "class": " c3-shape c3-shape-5 c3-bar c3-bar-5",
-                                                                          "d": "M 342.284375,263 L342.284375,263 L381.715625,263 L381.715625,263 z",
+                                                                          "d": "M 346.984375,266 L346.984375,266 L387.015625,266 L387.015625,266 z",
                                                                           "style": "stroke: rgb(255, 255, 255); fill: rgb(255, 255, 255); opacity: 1;"
                                                                         }
                                                                       },
@@ -3334,7 +3334,7 @@ module.exports = {
                                                                         "tagName": "path",
                                                                         "attributes": {
                                                                           "class": " c3-shape c3-shape-6 c3-bar c3-bar-6",
-                                                                          "d": "M 408.284375,263 L408.284375,263 L447.715625,263 L447.715625,263 z",
+                                                                          "d": "M 413.984375,266 L413.984375,266 L454.015625,266 L454.015625,266 z",
                                                                           "style": "stroke: rgb(255, 255, 255); fill: rgb(255, 255, 255); opacity: 1;"
                                                                         }
                                                                       },
@@ -3342,7 +3342,7 @@ module.exports = {
                                                                         "tagName": "path",
                                                                         "attributes": {
                                                                           "class": " c3-shape c3-shape-7 c3-bar c3-bar-7",
-                                                                          "d": "M 473.284375,263 L473.284375,24.818181818181827 L512.715625,24.818181818181827 L512.715625,263 z",
+                                                                          "d": "M 480.984375,266 L480.984375,25.0909090909091 L521.015625,25.0909090909091 L521.015625,266 z",
                                                                           "style": "stroke: rgb(255, 255, 255); fill: rgb(255, 255, 255); opacity: 1;"
                                                                         }
                                                                       },
@@ -3350,7 +3350,7 @@ module.exports = {
                                                                         "tagName": "path",
                                                                         "attributes": {
                                                                           "class": " c3-shape c3-shape-8 c3-bar c3-bar-8",
-                                                                          "d": "M 539.284375,263 L539.284375,263 L578.7156249999999,263 L578.7156249999999,263 z",
+                                                                          "d": "M 547.984375,266 L547.984375,266 L588.015625,266 L588.015625,266 z",
                                                                           "style": "stroke: rgb(255, 255, 255); fill: rgb(255, 255, 255); opacity: 1;"
                                                                         }
                                                                       },
@@ -3358,7 +3358,7 @@ module.exports = {
                                                                         "tagName": "path",
                                                                         "attributes": {
                                                                           "class": " c3-shape c3-shape-9 c3-bar c3-bar-9",
-                                                                          "d": "M 605.284375,263 L605.284375,263 L644.7156249999999,263 L644.7156249999999,263 z",
+                                                                          "d": "M 613.984375,266 L613.984375,266 L654.015625,266 L654.015625,266 z",
                                                                           "style": "stroke: rgb(255, 255, 255); fill: rgb(255, 255, 255); opacity: 1;"
                                                                         }
                                                                       }
@@ -3414,7 +3414,7 @@ module.exports = {
                                                             "tagName": "g",
                                                             "attributes": {
                                                               "class": "c3-chart-arcs",
-                                                              "transform": "translate(328.59375,126.5)"
+                                                              "transform": "translate(333.59375,128)"
                                                             },
                                                             "childNodes": [
                                                               {
@@ -3477,7 +3477,7 @@ module.exports = {
                                                         "attributes": {
                                                           "class": "c3-axis c3-axis-x",
                                                           "clip-path": "url(http://localhost:3000/#c3-1542123354-clip-xaxis)",
-                                                          "transform": "translate(0,263)",
+                                                          "transform": "translate(0,266)",
                                                           "style": "visibility: visible; opacity: 1;"
                                                         },
                                                         "childNodes": [
@@ -3487,7 +3487,7 @@ module.exports = {
                                                               "class": "c3-axis-x-label",
                                                               "transform": "",
                                                               "style": "text-anchor: end;",
-                                                              "x": "657.1875",
+                                                              "x": "667.1875",
                                                               "dx": "-0.5em",
                                                               "dy": "-0.5em"
                                                             }
@@ -3496,7 +3496,7 @@ module.exports = {
                                                             "tagName": "g",
                                                             "attributes": {
                                                               "class": "tick",
-                                                              "transform": "translate(33, 0)",
+                                                              "transform": "translate(34, 0)",
                                                               "style": "opacity: 1;"
                                                             },
                                                             "childNodes": [
@@ -3539,7 +3539,7 @@ module.exports = {
                                                             "tagName": "g",
                                                             "attributes": {
                                                               "class": "tick",
-                                                              "transform": "translate(99, 0)",
+                                                              "transform": "translate(101, 0)",
                                                               "style": "opacity: 1;"
                                                             },
                                                             "childNodes": [
@@ -3582,7 +3582,7 @@ module.exports = {
                                                             "tagName": "g",
                                                             "attributes": {
                                                               "class": "tick",
-                                                              "transform": "translate(165, 0)",
+                                                              "transform": "translate(167, 0)",
                                                               "style": "opacity: 1;"
                                                             },
                                                             "childNodes": [
@@ -3625,7 +3625,7 @@ module.exports = {
                                                             "tagName": "g",
                                                             "attributes": {
                                                               "class": "tick",
-                                                              "transform": "translate(231, 0)",
+                                                              "transform": "translate(234, 0)",
                                                               "style": "opacity: 1;"
                                                             },
                                                             "childNodes": [
@@ -3668,7 +3668,7 @@ module.exports = {
                                                             "tagName": "g",
                                                             "attributes": {
                                                               "class": "tick",
-                                                              "transform": "translate(296, 0)",
+                                                              "transform": "translate(301, 0)",
                                                               "style": "opacity: 1;"
                                                             },
                                                             "childNodes": [
@@ -3711,7 +3711,7 @@ module.exports = {
                                                             "tagName": "g",
                                                             "attributes": {
                                                               "class": "tick",
-                                                              "transform": "translate(362, 0)",
+                                                              "transform": "translate(367, 0)",
                                                               "style": "opacity: 1;"
                                                             },
                                                             "childNodes": [
@@ -3754,7 +3754,7 @@ module.exports = {
                                                             "tagName": "g",
                                                             "attributes": {
                                                               "class": "tick",
-                                                              "transform": "translate(428, 0)",
+                                                              "transform": "translate(434, 0)",
                                                               "style": "opacity: 1;"
                                                             },
                                                             "childNodes": [
@@ -3797,7 +3797,7 @@ module.exports = {
                                                             "tagName": "g",
                                                             "attributes": {
                                                               "class": "tick",
-                                                              "transform": "translate(493, 0)",
+                                                              "transform": "translate(501, 0)",
                                                               "style": "opacity: 1;"
                                                             },
                                                             "childNodes": [
@@ -3840,7 +3840,7 @@ module.exports = {
                                                             "tagName": "g",
                                                             "attributes": {
                                                               "class": "tick",
-                                                              "transform": "translate(559, 0)",
+                                                              "transform": "translate(568, 0)",
                                                               "style": "opacity: 1;"
                                                             },
                                                             "childNodes": [
@@ -3883,7 +3883,7 @@ module.exports = {
                                                             "tagName": "g",
                                                             "attributes": {
                                                               "class": "tick",
-                                                              "transform": "translate(625, 0)",
+                                                              "transform": "translate(634, 0)",
                                                               "style": "opacity: 1;"
                                                             },
                                                             "childNodes": [
@@ -3926,7 +3926,7 @@ module.exports = {
                                                             "tagName": "path",
                                                             "attributes": {
                                                               "class": "domain",
-                                                              "d": "M0,6V0H657.1875V6"
+                                                              "d": "M0,6V0H667.1875V6"
                                                             }
                                                           }
                                                         ]
@@ -3955,7 +3955,7 @@ module.exports = {
                                                             "tagName": "g",
                                                             "attributes": {
                                                               "class": "tick",
-                                                              "transform": "translate(0,263)",
+                                                              "transform": "translate(0,266)",
                                                               "style": "opacity: 1;"
                                                             },
                                                             "childNodes": [
@@ -3994,7 +3994,7 @@ module.exports = {
                                                             "tagName": "g",
                                                             "attributes": {
                                                               "class": "tick",
-                                                              "transform": "translate(0,240)",
+                                                              "transform": "translate(0,242)",
                                                               "style": "opacity: 1;"
                                                             },
                                                             "childNodes": [
@@ -4033,7 +4033,7 @@ module.exports = {
                                                             "tagName": "g",
                                                             "attributes": {
                                                               "class": "tick",
-                                                              "transform": "translate(0,216)",
+                                                              "transform": "translate(0,218)",
                                                               "style": "opacity: 1;"
                                                             },
                                                             "childNodes": [
@@ -4072,7 +4072,7 @@ module.exports = {
                                                             "tagName": "g",
                                                             "attributes": {
                                                               "class": "tick",
-                                                              "transform": "translate(0,192)",
+                                                              "transform": "translate(0,194)",
                                                               "style": "opacity: 1;"
                                                             },
                                                             "childNodes": [
@@ -4111,7 +4111,7 @@ module.exports = {
                                                             "tagName": "g",
                                                             "attributes": {
                                                               "class": "tick",
-                                                              "transform": "translate(0,168)",
+                                                              "transform": "translate(0,170)",
                                                               "style": "opacity: 1;"
                                                             },
                                                             "childNodes": [
@@ -4150,7 +4150,7 @@ module.exports = {
                                                             "tagName": "g",
                                                             "attributes": {
                                                               "class": "tick",
-                                                              "transform": "translate(0,144)",
+                                                              "transform": "translate(0,146)",
                                                               "style": "opacity: 1;"
                                                             },
                                                             "childNodes": [
@@ -4189,7 +4189,7 @@ module.exports = {
                                                             "tagName": "g",
                                                             "attributes": {
                                                               "class": "tick",
-                                                              "transform": "translate(0,121)",
+                                                              "transform": "translate(0,122)",
                                                               "style": "opacity: 1;"
                                                             },
                                                             "childNodes": [
@@ -4228,7 +4228,7 @@ module.exports = {
                                                             "tagName": "g",
                                                             "attributes": {
                                                               "class": "tick",
-                                                              "transform": "translate(0,97)",
+                                                              "transform": "translate(0,98)",
                                                               "style": "opacity: 1;"
                                                             },
                                                             "childNodes": [
@@ -4267,7 +4267,7 @@ module.exports = {
                                                             "tagName": "g",
                                                             "attributes": {
                                                               "class": "tick",
-                                                              "transform": "translate(0,73)",
+                                                              "transform": "translate(0,74)",
                                                               "style": "opacity: 1;"
                                                             },
                                                             "childNodes": [
@@ -4306,7 +4306,7 @@ module.exports = {
                                                             "tagName": "g",
                                                             "attributes": {
                                                               "class": "tick",
-                                                              "transform": "translate(0,49)",
+                                                              "transform": "translate(0,50)",
                                                               "style": "opacity: 1;"
                                                             },
                                                             "childNodes": [
@@ -4345,7 +4345,7 @@ module.exports = {
                                                             "tagName": "g",
                                                             "attributes": {
                                                               "class": "tick",
-                                                              "transform": "translate(0,25)",
+                                                              "transform": "translate(0,26)",
                                                               "style": "opacity: 1;"
                                                             },
                                                             "childNodes": [
@@ -4423,7 +4423,7 @@ module.exports = {
                                                             "tagName": "path",
                                                             "attributes": {
                                                               "class": "domain",
-                                                              "d": "M-6,1H0V263H-6"
+                                                              "d": "M-6,1H0V266H-6"
                                                             }
                                                           }
                                                         ]
@@ -4432,7 +4432,7 @@ module.exports = {
                                                         "tagName": "g",
                                                         "attributes": {
                                                           "class": "c3-axis c3-axis-y2",
-                                                          "transform": "translate(657.1875,0)",
+                                                          "transform": "translate(667.1875,0)",
                                                           "style": "visibility: hidden; opacity: 1;"
                                                         },
                                                         "childNodes": [
@@ -4451,7 +4451,7 @@ module.exports = {
                                                             "tagName": "g",
                                                             "attributes": {
                                                               "class": "tick",
-                                                              "transform": "translate(0,263)",
+                                                              "transform": "translate(0,266)",
                                                               "style": "opacity: 1;"
                                                             },
                                                             "childNodes": [
@@ -4490,7 +4490,7 @@ module.exports = {
                                                             "tagName": "g",
                                                             "attributes": {
                                                               "class": "tick",
-                                                              "transform": "translate(0,237)",
+                                                              "transform": "translate(0,240)",
                                                               "style": "opacity: 1;"
                                                             },
                                                             "childNodes": [
@@ -4529,7 +4529,7 @@ module.exports = {
                                                             "tagName": "g",
                                                             "attributes": {
                                                               "class": "tick",
-                                                              "transform": "translate(0,211)",
+                                                              "transform": "translate(0,213)",
                                                               "style": "opacity: 1;"
                                                             },
                                                             "childNodes": [
@@ -4568,7 +4568,7 @@ module.exports = {
                                                             "tagName": "g",
                                                             "attributes": {
                                                               "class": "tick",
-                                                              "transform": "translate(0,185)",
+                                                              "transform": "translate(0,187)",
                                                               "style": "opacity: 1;"
                                                             },
                                                             "childNodes": [
@@ -4607,7 +4607,7 @@ module.exports = {
                                                             "tagName": "g",
                                                             "attributes": {
                                                               "class": "tick",
-                                                              "transform": "translate(0,159)",
+                                                              "transform": "translate(0,160)",
                                                               "style": "opacity: 1;"
                                                             },
                                                             "childNodes": [
@@ -4646,7 +4646,7 @@ module.exports = {
                                                             "tagName": "g",
                                                             "attributes": {
                                                               "class": "tick",
-                                                              "transform": "translate(0,132)",
+                                                              "transform": "translate(0,134)",
                                                               "style": "opacity: 1;"
                                                             },
                                                             "childNodes": [
@@ -4685,7 +4685,7 @@ module.exports = {
                                                             "tagName": "g",
                                                             "attributes": {
                                                               "class": "tick",
-                                                              "transform": "translate(0,106)",
+                                                              "transform": "translate(0,107)",
                                                               "style": "opacity: 1;"
                                                             },
                                                             "childNodes": [
@@ -4724,7 +4724,7 @@ module.exports = {
                                                             "tagName": "g",
                                                             "attributes": {
                                                               "class": "tick",
-                                                              "transform": "translate(0,80)",
+                                                              "transform": "translate(0,81)",
                                                               "style": "opacity: 1;"
                                                             },
                                                             "childNodes": [
@@ -4880,7 +4880,7 @@ module.exports = {
                                                             "tagName": "path",
                                                             "attributes": {
                                                               "class": "domain",
-                                                              "d": "M6,1H0V263H6"
+                                                              "d": "M6,1H0V266H6"
                                                             }
                                                           }
                                                         ]
@@ -4994,7 +4994,7 @@ module.exports = {
                                                             "tagName": "g",
                                                             "attributes": {
                                                               "class": "tick",
-                                                              "transform": "translate(33, 0)",
+                                                              "transform": "translate(34, 0)",
                                                               "style": "opacity: 1;"
                                                             },
                                                             "childNodes": [
@@ -5037,7 +5037,7 @@ module.exports = {
                                                             "tagName": "g",
                                                             "attributes": {
                                                               "class": "tick",
-                                                              "transform": "translate(99, 0)",
+                                                              "transform": "translate(101, 0)",
                                                               "style": "opacity: 1;"
                                                             },
                                                             "childNodes": [
@@ -5080,7 +5080,7 @@ module.exports = {
                                                             "tagName": "g",
                                                             "attributes": {
                                                               "class": "tick",
-                                                              "transform": "translate(165, 0)",
+                                                              "transform": "translate(167, 0)",
                                                               "style": "opacity: 1;"
                                                             },
                                                             "childNodes": [
@@ -5123,7 +5123,7 @@ module.exports = {
                                                             "tagName": "g",
                                                             "attributes": {
                                                               "class": "tick",
-                                                              "transform": "translate(231, 0)",
+                                                              "transform": "translate(234, 0)",
                                                               "style": "opacity: 1;"
                                                             },
                                                             "childNodes": [
@@ -5166,7 +5166,7 @@ module.exports = {
                                                             "tagName": "g",
                                                             "attributes": {
                                                               "class": "tick",
-                                                              "transform": "translate(296, 0)",
+                                                              "transform": "translate(301, 0)",
                                                               "style": "opacity: 1;"
                                                             },
                                                             "childNodes": [
@@ -5209,7 +5209,7 @@ module.exports = {
                                                             "tagName": "g",
                                                             "attributes": {
                                                               "class": "tick",
-                                                              "transform": "translate(362, 0)",
+                                                              "transform": "translate(367, 0)",
                                                               "style": "opacity: 1;"
                                                             },
                                                             "childNodes": [
@@ -5252,7 +5252,7 @@ module.exports = {
                                                             "tagName": "g",
                                                             "attributes": {
                                                               "class": "tick",
-                                                              "transform": "translate(428, 0)",
+                                                              "transform": "translate(434, 0)",
                                                               "style": "opacity: 1;"
                                                             },
                                                             "childNodes": [
@@ -5295,7 +5295,7 @@ module.exports = {
                                                             "tagName": "g",
                                                             "attributes": {
                                                               "class": "tick",
-                                                              "transform": "translate(493, 0)",
+                                                              "transform": "translate(501, 0)",
                                                               "style": "opacity: 1;"
                                                             },
                                                             "childNodes": [
@@ -5338,7 +5338,7 @@ module.exports = {
                                                             "tagName": "g",
                                                             "attributes": {
                                                               "class": "tick",
-                                                              "transform": "translate(559, 0)",
+                                                              "transform": "translate(568, 0)",
                                                               "style": "opacity: 1;"
                                                             },
                                                             "childNodes": [
@@ -5381,7 +5381,7 @@ module.exports = {
                                                             "tagName": "g",
                                                             "attributes": {
                                                               "class": "tick",
-                                                              "transform": "translate(625, 0)",
+                                                              "transform": "translate(634, 0)",
                                                               "style": "opacity: 1;"
                                                             },
                                                             "childNodes": [
@@ -5424,7 +5424,7 @@ module.exports = {
                                                             "tagName": "path",
                                                             "attributes": {
                                                               "class": "domain",
-                                                              "d": "M0,6V0H657.1875V6"
+                                                              "d": "M0,6V0H667.1875V6"
                                                             }
                                                           }
                                                         ]
@@ -5434,7 +5434,7 @@ module.exports = {
                                                   {
                                                     "tagName": "g",
                                                     "attributes": {
-                                                      "transform": "translate(0,297)"
+                                                      "transform": "translate(0,300)"
                                                     },
                                                     "childNodes": [
                                                       {
@@ -5447,7 +5447,7 @@ module.exports = {
                                                           {
                                                             "tagName": "text",
                                                             "attributes": {
-                                                              "x": "338.3515625",
+                                                              "x": "343.09375",
                                                               "y": "9",
                                                               "style": "pointer-events: none;"
                                                             },
@@ -5462,10 +5462,10 @@ module.exports = {
                                                             "tagName": "rect",
                                                             "attributes": {
                                                               "class": "c3-legend-item-event",
-                                                              "x": "324.3515625",
+                                                              "x": "329.09375",
                                                               "y": "-5",
-                                                              "width": "60.484375",
-                                                              "height": "23",
+                                                              "width": "51",
+                                                              "height": "18",
                                                               "style": "fill-opacity: 0;"
                                                             }
                                                           },
@@ -5473,9 +5473,9 @@ module.exports = {
                                                             "tagName": "line",
                                                             "attributes": {
                                                               "class": "c3-legend-item-tile",
-                                                              "x1": "322.3515625",
+                                                              "x1": "327.09375",
                                                               "y1": "4",
-                                                              "x2": "332.3515625",
+                                                              "x2": "337.09375",
                                                               "y2": "4",
                                                               "stroke-width": "10",
                                                               "style": "stroke: rgb(255, 255, 255); pointer-events: none;"

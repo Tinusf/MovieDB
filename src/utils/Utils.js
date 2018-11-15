@@ -1,19 +1,18 @@
 export async function runGraphQLQuery(query, variables) {
-  const response = await fetch('http://it2810-36.idi.ntnu.no:4000/graphql', {
-    method: 'POST',
+  const response = await fetch("http://it2810-36.idi.ntnu.no:4000/graphql", {
+    method: "POST",
     headers: {
-      'Content-Type': 'application/json',
-      'Accept': 'application/json',
+      "Content-Type": "application/json",
+      Accept: "application/json"
     },
     body: JSON.stringify({
       query,
-      variables: variables,
+      variables: variables
     })
   });
   const json = await response.json();
   return json ? json.data : json;
 }
-
 
 export function castCrewStringToJson(inputString) {
   // Beklager veldig stygg hack, men noe av dataen i databasen vår er så rart formatert at vi må gjøre dette.
@@ -77,4 +76,4 @@ export function castCrewStringToJson(inputString) {
     .join("null");
   // Vi velger bare de 3 første (om de ikke har 3 blir det så mange som de har).
   return JSON.parse(formattedCast).slice(0, 3);
-};
+}

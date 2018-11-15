@@ -4,7 +4,11 @@ import MovieGridItem from "./MovieGridItem";
 import { runGraphQLQuery } from "../utils/Utils";
 import MovieView from "./MovieView";
 import { connect } from "react-redux";
-import { setView } from "../store/actions/MovieActions";
+import { setView, loadNewPage } from "../store/actions/MovieActions";
+import { Button } from "@material-ui/core";
+import Typography from "@material-ui/core/Typography";
+import InfiniteScroll from "react-infinite-scroller";
+import CircularProgress from "@material-ui/core/CircularProgress";
 
 /*
 
@@ -31,6 +35,10 @@ class MovieGrid extends React.Component {
     this.setState({ chosenMovieId: movieId });
   };
 
+  loadMore = () => {
+    this.props.dispatch(loadNewPage(this.props.searchText, this.props.asc, this.props.pagenr, this.props.ordering));
+  };
+
   render() {
     let movieItems;
     if (this.props.moviesData) {
@@ -49,10 +57,31 @@ class MovieGrid extends React.Component {
     return (
       <div>
         {this.props.viewName && this.props.viewName === "movieview" && <MovieView movieId={this.state.chosenMovieId} />}
-        {this.props.viewName && this.props.viewName === "moviegrid" && <Grid>{movieItems}</Grid>}
+        {this.props.viewName && this.props.viewName === "moviegrid" && (
+          <InfiniteScroll
+            pageStart={0}
+            loadMore={this.loadMore}
+            hasMore={this.props.moreToLoad}
+            loader={
+              <div className="loader" key={0}>
+                <CircularProgress style={{ color: "white" }} />
+              </div>
+            }
+          >
+            <Grid>{movieItems}</Grid>
+          </InfiniteScroll>
+        )}
       </div>
     );
   }
 }
 
-export default connect(state => ({ moviesData: state.movies.movies, viewName: state.movies.viewName }))(MovieGrid);
+export default connect(state => ({
+  searchText: state.movies.searchText,
+  asc: state.movies.asc,
+  pagenr: state.movies.pagenr,
+  ordering: state.movies.ordering,
+  moviesData: state.movies.movies,
+  moreToLoad: state.movies.moreToLoad,
+  viewName: state.movies.viewName
+}))(MovieGrid);

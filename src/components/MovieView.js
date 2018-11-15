@@ -12,7 +12,6 @@ import CircularProgress from "@material-ui/core/CircularProgress";
 import { connect } from "react-redux";
 
 import "c3/c3.css";
-import { format } from "url";
 
 const uuidv1 = require("uuid/v1");
 

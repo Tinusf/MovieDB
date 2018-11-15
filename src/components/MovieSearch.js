@@ -15,7 +15,7 @@ import Button from "@material-ui/core/Button";
 import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
 import { connect } from "react-redux";
-import { setSearchSettings, setView } from "../store/actions/MovieActions";
+import { setSearchSettings, setView, loadNewPage } from "../store/actions/MovieActions";
 import ArrowBack from "@material-ui/icons/ArrowBack";
 /*
 
@@ -154,7 +154,7 @@ class MovieSearch extends React.Component {
 
   goback = () => {
     this.props.dispatch(setView("moviegrid"));
-  }
+  };
 
   componentDidMount() {
     this.props.dispatch(setSearchSettings("", false, 0, "vote_count"));
@@ -165,7 +165,7 @@ class MovieSearch extends React.Component {
     const { anchorEl } = this.state;
     return (
       <AppBar position="static">
-        <Toolbar className={classes.menu} >
+        <Toolbar className={classes.menu}>
           <Button color="inherit" onClick={e => this.goback()}>
             <Typography variant="h6" className={classes.title} color="inherit">
               Movie database

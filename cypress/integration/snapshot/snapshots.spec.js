@@ -40,8 +40,10 @@ describe('snapshot testing', () => {
       .first()
       .click()
       .wait(waitTime);
-    // Ta snapshot av movieView altså detaljerte siden om filmen María (y los demás).
-    cy.get('#root')
+    // Ta snapshot av movieView sin leftSection om filmen María (y los demás).
+    // Det hadde vært en bedre snapshots om jeg hadde valgt alt, men grafen blir renderet litt forskjellig på linux/mac/windows og vi vil at testene skal bli kjørt på alle plattformer uten problemer.
+
+    cy.get('.leftSection')
       .snapshot({
         name: 'MovieView snapshot',
         json: true

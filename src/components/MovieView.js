@@ -230,7 +230,7 @@ class MovieView extends React.Component {
         <MovieContainer>
           {this.state.movieMetaData && (
             <MovieInfo>
-              <LeftSection>
+              <LeftSection className="leftSection">
                 <MoviePoster src={"https://image.tmdb.org/t/p/w1280/" + this.state.movieMetaData.poster_path} />
                 <Section>
                   <Row>

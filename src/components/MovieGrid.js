@@ -1,18 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 import MovieGridItem from "./MovieGridItem";
-import { runGraphQLQuery } from "../utils/Utils";
 import MovieView from "./MovieView";
 import { connect } from "react-redux";
 import { setView, loadNewPage } from "../store/actions/MovieActions";
-import { Button } from "@material-ui/core";
-import Typography from "@material-ui/core/Typography";
 import InfiniteScroll from "react-infinite-scroller";
 import CircularProgress from "@material-ui/core/CircularProgress";
 
 /*
 
-Display information about a movie. Should be viewed in "fullscreen"
+Viser enten et grid med flere thumbsnails for filmer, eller detaljert visning om en film (MovieView)
 
 */
 const Grid = styled.div`
@@ -30,18 +27,21 @@ class MovieGrid extends React.Component {
     this.state = {};
   }
 
+  // Om du trykker på en av thumbsnailsene så blir denne funksjonen kjørt. Den kjører en action setView som endrer hvilket view som er i redux. og den setter state til movieId til filmen du trykket på.
   updateView = movieId => {
     this.props.dispatch(setView("movieview"));
     this.setState({ chosenMovieId: movieId });
   };
 
   loadMore = () => {
+    // Kjøres når du er på bunnen og må laste inn flere filmer.
     this.props.dispatch(loadNewPage(this.props.searchText, this.props.asc, this.props.pagenr, this.props.ordering));
   };
 
   render() {
     let movieItems;
     if (this.props.moviesData) {
+      // her blir movieItems variabelen et array med MovieGridItem's (altså våre thumbnails)
       movieItems = this.props.moviesData.map((movie, i) => (
         <MovieGridItem
           key={i}

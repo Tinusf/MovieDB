@@ -13,10 +13,12 @@ class MovieRating extends React.Component {
     rating: -1
   };
 
+  // Når du holder musen over.
   updateRating = n => {
     if (!this.state.ratingFinal) this.setState({ rating: n });
   };
 
+  // Når du trykker på en stjerne.
   setFinal = n => {
     this.setState({ rating: n, ratingFinal: true });
   };
@@ -38,6 +40,7 @@ class MovieRating extends React.Component {
     // Datasettet vi bruker gir filmer rating mellom 0.5 og 5 hvor man kan gi f.eks 2.5
     // Vi ønsket å ha ratings som heltall mellom 1 og 10. Derfor plusser vi på en og ganger med to.
     runGraphQLQuery(query, { movieId: this.props.movieId, userId: this.props.userId, rating: (this.state.rating + 1) / 2 }).then(() => {
+      // Etter dette queryet er ferdig så kan vi kjøre ratingHasUpdated. Viktig å bruke .then til dette fordi runGraphQLQuery er an async funksjon og vi vil ikke kjøre en annen query f.eks å hente denne ratingen før denne er ferdig.
       this.props.ratingHasUpdated();
     });
   };

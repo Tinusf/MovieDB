@@ -1,5 +1,4 @@
 import Schema from './schema';
-import {printSchema}  from 'graphql';
 const express = require('express');
 const graphqlHTTP = require('express-graphql');
 
@@ -12,7 +11,5 @@ app.use('/graphql', graphqlHTTP({
     graphiql: true
 }));
 
-
-// console.log(printSchema(Schema))
-
+// Kjører server på port 4000.
 app.listen(4000);

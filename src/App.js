@@ -15,6 +15,7 @@ const store = composeStoreWithMiddleware(reducer);
 class App extends Component {
   render() {
     return (
+      // Kobler opp redux.
       <Provider store={store}>
         <div className="App">
           <MovieSearch />

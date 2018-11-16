@@ -17,7 +17,7 @@ const uuidv1 = require("uuid/v1");
 
 /*
 
-Display detailed information about a movie in a single page.
+Detaljert informasjon om en film. 
 
 */
 class MovieView extends React.Component {
@@ -130,7 +130,9 @@ class MovieView extends React.Component {
   };
 
   ratingHasUpdated = () => {
+    // Hent ut din rating fra databasen igjen. 
     this.getYourRatingForAMovieQuery(this.props.movieId, this.getUserId());
+    // Så henter du hele grafen igjen. 
     this.getRatingsForAMovieQuery(this.props.movieId);
   };
 
@@ -291,9 +293,9 @@ class MovieView extends React.Component {
 
               <MovieDetails>
                 <Section>
-                  <Typography style={{ ...fontStyle }} variant="h4" color="white" gutterBottom className="title">
+                  <Typography style={{ ...fontStyle }} variant="h4" gutterBottom className="title">
                     {this.state.movieMetaData.title}
-                    <Typography style={{ ...fontStyle }} variant="h5" gutterBottom>
+                    <Typography style={{ ...fontStyle }} gutterBottom>
                       {this.state.movieMetaData.release_date}
                     </Typography>
                   </Typography>
@@ -355,6 +357,7 @@ class MovieView extends React.Component {
   };
 
   componentDidMount() {
+    // Kjør queries for denne filmen når du loader dette komponentet.
     this.runMovieQuery(this.props.movieId);
     this.runCastCrewQuery(this.props.movieId);
     this.getRatingsForAMovieQuery(this.props.movieId);

@@ -1,4 +1,4 @@
-const waitTime = 6000
+const waitTime = 6000;
 
 describe('snapshot testing', () => {
   beforeEach(() => {
@@ -42,6 +42,7 @@ describe('snapshot testing', () => {
       .wait(waitTime);
     // Ta snapshot av movieView sin leftSection om filmen María (y los demás).
     // Det hadde vært en bedre snapshots om jeg hadde valgt alt, men grafen blir renderet litt forskjellig på linux/mac/windows og vi vil at testene skal bli kjørt på alle plattformer uten problemer.
+    // Vi fant også en bug om du har node v10, da blir klassenavnene litt forskjellig og du failer dermed snapshottet.
 
     cy.get('.leftSection')
       .snapshot({

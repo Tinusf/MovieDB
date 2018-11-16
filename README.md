@@ -1,23 +1,23 @@
 # Prosjekt 4: The Movie Database
 
 ## Innholdsfortegnelse
-- [Nettsidens virkemåte](#Nettsidens-virkemåte)
-- [Backend](#Backend)
-    - [SQLite](#SQLite)
-    - [GraphQL](#GraphQL)
-    - [Express](#Express)
-- [Frontend](#Frontend)
-    - [React](#React)
-    - [Redux](#Redux)
-- [Testing med Cypress](#Testing-med-Cypress)
-    - [End-To-End testing](#End-To-End-testing)
-    - [Snapshot testing](#Snapshot-testing)
-    - [Unit testing](#Unit-testing)
-- [Git](#Git)
-- [Screenshot](#Screenshot)
+- [Nettsidens virkemåte](#nettsidens-virkemåte)
+- [Backend](#backend)
+    - [SQLite](#sqlite)
+    - [GraphQL](#graphql)
+    - [Express](#express)
+- [Frontend](#frontend)
+    - [React](#react)
+    - [Redux](#redux)
+- [Testing med Cypress](#testing-med-cypress)
+    - [End-To-End testing](#end-to-end-testing)
+    - [Snapshot testing](#snapshot-testing)
+    - [Unit testing](#unit-testing)
+- [Git](#git)
+- [Screenshot](#screenshot)
 
 ## Nettsidens virkemåte
-Dette er en nettside hvor man kan søke etter filmer og gi filmene en rating. Man kan sortere filmer på flere premisser som for eksempel Revenue, budget og popularity. Ved å trykke på pilen øverst til høyre endrer man sorteringen fra desc til asc eller motsatt. Backend betår av en sqlite database som er koblet opp mot et GraphQL API gjennom en Express server. <---- MÅ ENDRE DENNE SETNINGEN. Til sammen er det lagret over 45 000 filmer og 26 000 000 ratings i databasen.
+Dette er en nettside hvor man kan søke etter filmer og gi filmene en rating. Man kan sortere filmer på flere premisser som for eksempel Revenue, budget og popularity. Ved å trykke på pilen øverst til høyre endrer man sorteringen fra desc til asc eller motsatt. Backend betår av en sqlite database som er koblet opp mot et GraphQL API gjennom en Express server. Til sammen er det lagret over 45 000 filmer og 26 000 000 ratings i databasen.
 
 Link til nettsiden: http://it2810-36.idi.ntnu.no/prosjekt4/
 
@@ -27,8 +27,6 @@ For å kjøre lokalt kan du kjøre
 npm start
 ```
 Da vil nettsiden være tilgjengelig på http://localhost:3000/
-
-SÅ liksom hvordan ting henger sammen. backend så har vi sqlite database og så graphql express server........ react front end.. bittelitt innledning??????
 
 ## Backend
 Vi har utviklet backend for nettsiden selvstendig. For å starte backend servern så skriver du 
@@ -49,7 +47,7 @@ Et problem vi møtte ved å bruke dette datasettet er at mye av dataen er format
 GraphQL er et spørrings og datamanipulering språk utviklet av facebook. Det ses på som et mer effektivt, kraftfullt og fleksibelt alternativ til REST. Mye på grunn av at man definere eksakt hva slags data man ønsker og derav redusere datatrafikk. GraphQL tar ikke seg av oppgaver knyttet til lagring og henting av data. Det vil si at man må ha en egen database system i bunn. I vårt tilfelle valgte vi å bruke SQLite 
 
 I GraphQL begynner man med å beskrive strukturen på dataen. Den kan for eksempel beskrives slik:
-``` json
+```
 type movies_metadata {
   """Movie budget"""
   budget: Int
@@ -74,7 +72,7 @@ type movies_metadata {
 
 
 Deretter kan man lage en spørring
-``` json
+```
 query MovieView_Query {
   movie(id: 24428) {
       original_title
@@ -122,7 +120,7 @@ Vi satt dette opp ved hjelp av å se på dette prosjektet: https://github.com/mr
 #### React
  
 ##### Infinite scrolling
-Sider Laster inn nye sider dynamisk når man scroller ned til bunnen av siden. Måten vi gjorde dette på var å legge inn async payloads i en action ved å bruke redux-promise-middleware. Dette brukte vi til å laste ned dataen til den neste siden med GraphQL spørring som payload. Videre blir dataen liste over resultater i Redux. Dataen fra redux er igjen linket opp til resultat siden. 
+Siden laster inn nye sider dynamisk når man scroller ned til bunnen av siden. Måten vi gjorde dette på var å legge inn async payloads i en action ved å bruke redux-promise-middleware. Dette brukte vi til å laste ned dataen til den neste siden med GraphQL spørring som payload. Videre blir dataen liste over resultater i Redux. Dataen fra redux er igjen linket opp til resultat siden. 
 
  
 ##### Styled components
@@ -156,8 +154,8 @@ Store deler av Redux er kode man skriver selv, selve rammeverket er på 2kb. Nå
 
 Et bruksområde var å lagre hvilken view vi var på. Om vi var på moviegrid view, altså der hvor du ser mange små thumbsnails og mange filmer. Eller om vi er på movieview hvor du ser en detaljert visning av en spesifikk film.
 
-Vi brukte også redux til å ta å hente ut resultat på et søk. Og når du blar.
-Når du blar så legger vi til det nye søkeresultatet i reducern vår. Når det er første gang du søker på noe så får du bare maks 35 filmer fra servern i reducern.
+Vi brukte også redux til å ta å hente ut resultat på et søk og når du blar.
+Når du blar så legger vi til det nye søkeresultatet i reduceren vår. Når det er første gang du søker på noe så får du bare maks 35 filmer fra servern i reduceren.
 
 
 ## Testing med Cypress
@@ -169,12 +167,13 @@ Når du har det kan du kjøre:
 ```
 npm test
 ```
-Da vil et nytt Cypress vindu åpne seg. For å kjøre alle testene kan du trykke "Run all specs" øverst til høyre, eller kjøre enkelttester ved å dobbelt trykke på filen.
+Da vil et nytt Cypress vindu åpne seg. For å kjøre alle testene kan du trykke "Run all specs" øverst til høyre, eller kjøre enkelttester ved å dobbelt trykke på filen.  
 **OBS!:** Vi hadde problemer med å få snapshot testene til å fungere med Node v10.
 
-Vi har valgt å bare bruke Cypress til testing fordi det har støtte for end-to-end testing, snapshot testing og unit testing.
+Vi har valgt å bare bruke Cypress til testing fordi det har støtte for end-to-end testing, snapshot testing og unit testing, og vi bruker dermed ikke jest.
+
 #### End-To-End testing
-Vi brukte litt tid før vi kom i gang med å skrive tester, spesielt end-to-end tester. Dette var på grunn av at veldig mye backend og frontend måtte være på plass før det var noe hensikt å front-end teste. Etter vi hadde en fungerende nettside kunne vi begynne å skrive end-to-end tester. Her tester vi at søking og sortering gir korrekt film, og vi tester at det fungerer å gi en film en rating. Vi erfarte tidlig at det er viktig å hen en ventetid etter man har trykker noe for å være sikker på at alt har lastet inn. Hvis noen av testene ikke fungerer kan det være fordi ventetiden ikke er lang nok.
+Vi brukte litt tid før vi kom i gang med å skrive tester, spesielt end-to-end tester. Dette var på grunn av at veldig mye backend og frontend måtte være på plass før det var noe hensikt å front-end teste. Etter vi hadde en fungerende nettside kunne vi begynne å skrive end-to-end tester. Her tester vi at søking og sortering gir korrekt film, og vi tester at det fungerer å gi en film en rating. Vi erfarte tidlig at det er viktig å ha en ventetid etter man har trykket noe for å være sikker på at alt har lastet inn. Hvis noen av testene ikke fungerer kan det være fordi ventetiden ikke er lang nok.
 #### Snapshot testing
 
 Snapshot testing med Cypress fungerer litt annerledes enn snapshot testing med Jest. Med Cypress kan ikke ta snapshot av ett og ett komponent. Man må derimot velge et element som har blitt renderet i DOMet med CSS IDer og klasser litt som jQuery sin selector.
@@ -185,6 +184,7 @@ Som tidligere nevnt hadde vi problemer med å få snapshot testene til å funger
 ```
 node -v
 ```
+Alle testene funker for oss både på Windows, Mac og Ubuntu med node versjon 8.
 
 #### Unit testing
 En viktig funksjon for oss å teste var castCrewStringToJson(inputString) som gjør om stringen vi lagrer i databasen til gyldig json. Hvis denne funksjonen ikke fungerer som den skal vil vi ikke få vist blant annet skuespillere for en film. Nettsiden vil også krasje på chrome.

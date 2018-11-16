@@ -1,36 +1,23 @@
 import React from "react";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
-import IconButton from "@material-ui/core/IconButton";
 import Typography from "@material-ui/core/Typography";
 import InputBase from "@material-ui/core/InputBase";
 import { fade } from "@material-ui/core/styles/colorManipulator";
 import { withStyles } from "@material-ui/core/styles";
 import SearchIcon from "@material-ui/icons/Search";
 import SortIcon from "@material-ui/icons/UnfoldMore";
-import { createMuiTheme } from "@material-ui/core/styles";
-import purple from "@material-ui/core/colors/purple";
-import styled from "styled-components";
 import Button from "@material-ui/core/Button";
 import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
 import { connect } from "react-redux";
-import { setSearchSettings, setView, loadNewPage } from "../store/actions/MovieActions";
+import { setSearchSettings, setView } from "../store/actions/MovieActions";
 import ArrowBack from "@material-ui/icons/ArrowBack";
 /*
 
-Should be a part of the grid display of movies
+Topbaren som inneholder tilbakeknappen, søkefeltet og sortering.
 
 */
-
-const theme = createMuiTheme({
-  palette: {
-    primary: purple,
-    secondary: {
-      main: "#f44336"
-    }
-  }
-});
 
 const styles = theme => ({
   root: {
@@ -134,16 +121,23 @@ class MovieSearch extends React.Component {
     this.setState({ anchorEl: event.currentTarget });
   };
 
+  // Når sort by dropdown menyen lukkes. enten fordi du trykker på et element i dropdown menyen eller fordi du klikker på utsiden av.
   handleClose = sortBy => {
     this.setState({ anchorEl: null });
-    this.setState({ ordering: sortBy });
+    // Hvis du trykker utenfor dropdown menyen så blir sortBy et objekt, og det blir mye tull om du prøver å sette ordering til det. 
+    if (typeof sortBy === 'string' || sortBy instanceof String) {
+      this.setState({ ordering: sortBy });
+    }
   };
 
+  // Endre hvilken vei du vil sortere dataen.
   handleChangeSorting = ascBool => {
     this.setState({ asc: ascBool });
   };
 
+  // Når du oppdaterer enten søketekst, sorteringen eller noe sånn så blir staten endret, da vil denne funksjonen bli kjørt.
   componentDidUpdate(prevProps, prevState) {
+    // Kjører da setSearchSettings som bruker redux og kjører et query for å hente ut filmer fra databasen.
     this.props.dispatch(setSearchSettings(this.state.searchText, this.state.asc, this.state.pagenr, this.state.ordering));
 
     // Hvis du alt var på movieView siden og så endrer du søkefelt eller sorteringen så vil både forrige props og propsen nå være movieview og vi kan gå tilbake til moviegridden.
@@ -157,6 +151,7 @@ class MovieSearch extends React.Component {
   };
 
   componentDidMount() {
+    // Default søket vårt. Bare så vi har noen fine filmer når du loader siden for første gang.
     this.props.dispatch(setSearchSettings("", false, 0, "vote_count"));
   }
 
@@ -190,7 +185,6 @@ class MovieSearch extends React.Component {
               className="searchInputField"
               onChange={event => {
                 this.setState({ searchText: event.target.value });
-                // this.sendInput(searchText => event.target.value);
               }}
             />
           </div>

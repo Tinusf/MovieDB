@@ -17,7 +17,7 @@ const uuidv1 = require("uuid/v1");
 
 /*
 
-Display detailed information about a movie in a single page.
+Detaljert informasjon om en film. 
 
 */
 class MovieView extends React.Component {
@@ -26,6 +26,7 @@ class MovieView extends React.Component {
     this.state = {};
   }
 
+  // graphql query for å hente data for en bestemt film
   runMovieQuery = movieId => {
     const query = `
     query MovieView_Query($movieId: Int!) {
@@ -63,6 +64,7 @@ class MovieView extends React.Component {
     return "-";
   };
 
+  // graphql query for å hente ratingen den nåværende brukeren har gitt en bestemt film
   getYourRatingForAMovieQuery = (movieId, userId) => {
     const query = `
     query rating($movieId: Int!, $userId: String!) {
@@ -78,6 +80,7 @@ class MovieView extends React.Component {
     });
   };
 
+  // graphql query for å hente ratings for en bestemt film
   getRatingsForAMovieQuery = movieId => {
     const query2 = `
     query ratingsForAMovieQuery($movieId: Int!) {
@@ -109,6 +112,7 @@ class MovieView extends React.Component {
       });
   };
 
+  // graphql query for å hente cast og crew for en bestemt film
   runCastCrewQuery = movieId => {
     const query = `
     query castAndCrewQuery($movieId: Int!) {
@@ -126,7 +130,9 @@ class MovieView extends React.Component {
   };
 
   ratingHasUpdated = () => {
+    // Hent ut din rating fra databasen igjen. 
     this.getYourRatingForAMovieQuery(this.props.movieId, this.getUserId());
+    // Så henter du hele grafen igjen. 
     this.getRatingsForAMovieQuery(this.props.movieId);
   };
 
@@ -287,9 +293,9 @@ class MovieView extends React.Component {
 
               <MovieDetails>
                 <Section>
-                  <Typography style={{ ...fontStyle }} variant="h4" color="white" gutterBottom className="title">
+                  <Typography style={{ ...fontStyle }} variant="h4" gutterBottom className="title">
                     {this.state.movieMetaData.title}
-                    <Typography style={{ ...fontStyle }} variant="h5" gutterBottom>
+                    <Typography style={{ ...fontStyle }} gutterBottom>
                       {this.state.movieMetaData.release_date}
                     </Typography>
                   </Typography>
@@ -351,6 +357,7 @@ class MovieView extends React.Component {
   };
 
   componentDidMount() {
+    // Kjør queries for denne filmen når du loader dette komponentet.
     this.runMovieQuery(this.props.movieId);
     this.runCastCrewQuery(this.props.movieId);
     this.getRatingsForAMovieQuery(this.props.movieId);

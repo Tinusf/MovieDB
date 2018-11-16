@@ -1,3 +1,4 @@
+// Funksjon som tar inn et graphql query og variabler og så sender til server og returnerer json svar.
 export async function runGraphQLQuery(query, variables) {
   const response = await fetch("http://it2810-36.idi.ntnu.no:4000/graphql", {
     method: "POST",

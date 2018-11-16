@@ -1,5 +1,5 @@
 // Har en ganske lang wait time for å være sikker på at alt lastes inn i tide.
-const waitTime = 2000;
+const waitTime = 4000;
 
 describe('Give movie a rating', () => {
   beforeEach(() => {

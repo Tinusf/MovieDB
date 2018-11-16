@@ -4,17 +4,10 @@ import Typography from "@material-ui/core/Typography";
 
 /*
 
-Add a review about a move
+Dette er en av de små thumbsnailsene på moviegrid. Et lite bildet og tittel også er den klikkbar. 
 
 */
 class MovieGridItem extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      url: this.props.url
-    };
-  }
-
   render() {
     const Container = styled.div`
       cursor: pointer;

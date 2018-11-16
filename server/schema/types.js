@@ -6,6 +6,7 @@ import {
   GraphQLFloat
 } from 'graphql';
 
+// GraphQL typene, vi har egt bare oversatt sql schemaet til graphQL formatet.
 export const movies_metadataType = new GraphQLObjectType({
   name: 'movies_metadata',
   description: 'Movie metadata',

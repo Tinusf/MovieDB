@@ -34,8 +34,8 @@
     "uuid": "^3.3.2"
   },
   "scripts": {
-    "start": "babel-node --presets es2015 ./src/StartServer.js",
-    "start-client": "react-scripts start",
+    "start": "react-scripts start",
+    "start-graphql-server": "babel-node --presets es2015 ./server/StartServer.js",
     "build": "react-scripts build",
     "eject": "react-scripts eject",
     "cypress": "cypress open",

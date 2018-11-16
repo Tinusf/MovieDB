@@ -1,3 +1,3 @@
 git pull
 npm install
-npm start
+npm run start-graphql-server

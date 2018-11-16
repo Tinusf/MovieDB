@@ -5,11 +5,11 @@ import configureStore from "redux-mock-store";
 let mockStore = configureStore();
 let store;
 
-describe("selectAvatar", () => {
+describe("Redux tests", () => {
   beforeEach(() => {
     store = mockStore();
   });
-
+  // Blir det riktig action når du kjører setView.
   it("Dispatches the correct action and payload", () => {
     const expectedActions = [
       {
@@ -23,6 +23,7 @@ describe("selectAvatar", () => {
 
   it("Reducer saves the correct variables to the redux state.", () => {
     expect(
+      // Om reducer får inn dette:
       reducer([], {
         type: SET_SEARCH_SETTINGS + "_FULFILLED",
         payload: {
@@ -33,6 +34,7 @@ describe("selectAvatar", () => {
           ordering: "title"
         }
       })
+      // Blir da movies reducern vår slik?
     ).to.deep.equal({
       movies: {
         movies: [{ testMovie: "is good" }],

@@ -2,6 +2,7 @@ import { GraphQLObjectType, GraphQLString, GraphQLInt, GraphQLList, GraphQLBoole
 import { movies_metadataType, RatingsType, CreditsType, KeywordsType, linksType } from './types';
 import { resolveMovie, resolveMovies, resolveRating, resolveCredits, resolveKeywords, resolveRatingsForAMovie, resolveLinks } from './resolver';
 
+// her definerer vi graphQL querisene vi har. 
 const Query = new GraphQLObjectType({
   name: 'RootQueryType',
   fields: {
@@ -20,8 +21,10 @@ const Query = new GraphQLObjectType({
       resolve: resolveMovie
     },
     movies: {
+      // Dette er hva queriet returnerer, i dette tilfellet er det en liste med movie_metadataType.
       type: new GraphQLList(movies_metadataType),
       args: {
+        // Denne tar inn 4 argumenter.
         searchText: {
           searchText: 'searchText',
           type: GraphQLString
@@ -39,6 +42,7 @@ const Query = new GraphQLObjectType({
           type: GraphQLBoolean
         }
       },
+      // resolve er hvordan den faktisk utfører queriet. 
       resolve: resolveMovies
     },
     rating: {
